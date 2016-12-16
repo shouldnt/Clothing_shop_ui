@@ -2,7 +2,8 @@
 <html>
 	
 	<head>
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
 		<meta charset="utf-8">
 	</head>
 	<body>
@@ -11,9 +12,68 @@
 		
 		<h1>hello world</h1>
 
+		<div v-for="n in 10" class="product-item">
+			<div class="product-detail">
+
+				<div class="left-block">				
+					<div class="product-image">
+						<img class="img-responsive" src="./images/temp.jpg" alt="temp">
+						<span class="product-additional">
+							<img class="img-responsive" src="./images/temp-additional.jpg" alt="">
+						</span>
+					</div>
+
+					<div class="cart">
+						<a href="#" class="button" >
+							<i class="fa fa-shopping-card"></i>
+							<span>ADD TO CART</span>
+						</a>
+					</div>
+
+					<div class="functional">
+						<div class="compare">
+							<a href="#" class="btn-product">
+								<i class="fa fa-clone"></i>
+								<span>COMPARE</span>
+							</a>
+						</div>
+
+						<div class="wishlist">
+							<a href="#">
+								<i class="fa fa-heart-o"></i>
+								<span>ADD TO WISH LIST</span>
+							</a>
+						</div>
+
+						<div class="quickview">
+							<a href="#">
+								<i class="fa fa-eye"></i>
+								<span>QUICK VIEW</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="right-block">
+					<div class="product-meta">
+						<h5 class="name">Name of product</h5>
+
+						<div class="hook-reviews">
+							
+						</div>
+
+						<div class="content-price">
+							<span>$100.00</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
-	<script></script>
+	<script src="./js/vue.js"></script>
+	<script src="./js/main.js"></script>
 	</body>
 
 </html>

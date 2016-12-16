@@ -1,0 +1,150 @@
+$primary: #00b1b3
+
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+
+.btn-product
+    position: relative
+    width: 40px
+    height: 40px
+
+.product-item 
+    position: relative 
+    min-height: 1px 
+    padding-left: 15px 
+    padding-right: 15px 
+    width: (100% / 7)
+    float: left
+
+
+.product-detail 
+    position: relative 
+    margin-bottom: 30px 
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box 
+    box-sizing: border-box 
+    text-align: center
+
+    &:hover
+        .cart
+            bottom: 0
+        .functional
+            right: 0
+
+
+.left-block
+    position: relative 
+    overflow: hidden 
+
+.product-image
+    position: relative 
+    overflow: hidden 
+    //text-align: center 
+    -webkit-border-radius: 0 
+    -moz-border-radius: 0 
+    -ms-border-radius: 0 
+    -o-border-radius: 0 
+    border-radius: 0 
+
+    &:hover
+        .product-additional
+            top: 0 
+            //display: block 
+            opacity: 1 
+            top: 0
+    
+
+
+.product-additional
+    position: absolute 
+    top: 0 
+    left: 0 
+    overflow: hidden 
+    text-align: center 
+    -webkit-border-radius: 0 
+    -moz-border-radius: 0 
+    -ms-border-radius: 0 
+    -o-border-radius: 0 
+    border-radius: 0 
+    //display: none 
+
+    opacity: 0 
+    transition: opacity 0.25s ease-in-out 
+    -moz-transition: opacity 0.25s ease-in-out 
+    -webkit-transition: opacity 0.25s ease-in-out 
+
+.product-detail
+    .cart
+        position: absolute
+        left: 0
+        right: 0
+        bottom: -35px
+        margin: auto
+        z-index: 213
+
+        transition: bottom 0.25s ease-in-out
+
+        .button 
+            height: 35px 
+            line-height: 35px 
+            width: 100% 
+            text-align: center 
+            text-decoration: none
+            background: #00b1b3
+            color: white 
+            font-size: 12px 
+            font-weight: bold 
+            text-transform: uppercase 
+            padding: 0 
+            z-index: 99 
+            display: block 
+            border: none 
+            -webkit-border-radius: 0 
+            -moz-border-radius: 0 
+            -ms-border-radius: 0 
+            -o-border-radius: 0 
+            border-radius: 0 
+
+            -webkit-transition: all 0.5s ease 
+            transition: all 0.5s ease 
+
+            &:hover
+                background-color: darken(#00b1b3, 20%)
+    
+    .functional
+        position: absolute
+        z-index: 123
+        bottom: 40px
+        right: -50px
+        width: 40px
+
+        transition: right 0.5s ease-in-out
+
+        > div
+            width: 40px
+            height: 40px
+            background: rgba(0,0,0,0)
+            transition: background-color 0.2s ease-in-out
+            display: flex
+            align-items: center
+            justify-content: center
+            
+            &:first-child
+                line-height: 40px
+            i
+                color: black
+
+
+            &:hover 
+                background: $primary
+                i 
+                    color: white
+
+        span
+            display: none
+
+
+
