@@ -1,0 +1,132 @@
+@import 'bg'
+
+@import 'color'
+
+@import 'global'
+
+
+.bag
+	margin-top: 20px
+	display: flex
+	justify-content: space-between
+	background: white
+
+	&:nth-child(n)
+		padding: 20px 20px
+
+// customer
+.customer-info
+	width: 48%
+
+.info__title
+	font-weight: bold
+	display: flex
+	align-items: center
+	i 
+		color: $highlight
+		padding: 5px
+		font-size: 2em
+	p 
+		font-size: 2em
+		margin: 10px 0
+
+.info__note
+	border-top: 1px solid $grey
+	border-bottom: 1px solid $grey
+
+.info__form
+
+	.form__item
+		margin-top: 10px
+
+		label
+			margin-bottom: 2px
+			float: left
+			width: 100%
+		input 
+			width: 90%
+			padding: 7px 5px
+
+
+// product list
+.product-list
+	width: 48%
+
+.list__title
+	display: flex
+	align-items: center
+	font-weight: bold 
+	i 
+		color: $highlight
+		padding: 5px
+		font-size: 2em
+	p 
+		font-size: 2em
+		margin: 10px 0
+
+
+.list__table
+
+	&:hover
+		table 
+			display: none
+	th, td
+		padding: 10px 20px
+		border-bottom: 1px solid #eee
+		text-align: left
+		font-size: 13px
+		font-weight: 700
+		color: #000
+		padding: 10px 15px
+
+
+.list__check
+	margin-top: 20px
+	text-align: right
+	padding: 20px 0
+	border-bottom: 1px solid $grey 
+	border-top: 1px solid $grey
+
+	.gift-code
+		width: 100%
+		input 
+			padding: 10px 5px
+			width: 50%
+	.total-check
+		ul 
+			margin-bottom: 0
+			li 
+				display: flex
+				align-items: center
+				justify-content: flex-end
+
+				label 
+					flex: 5
+					margin-right: 5px
+				p 
+					flex: 1
+					text-align: right
+					margin: 10px 0
+
+.list__button
+	margin: 20px 0
+	display: flex
+	justify-content: space-between
+
+	button
+		border: none
+		padding: 10px 30px
+		border-color: #f4f4f4	
+		background: #f4f4f4
+		background-image: none
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,.3)
+		color: black
+		font-weight: bold
+
+		&.highlight
+			background-color: $highlight
+			color: white
+
+		&:hover
+			background-color: darken(#f4f4f4, 10%)
+			color: black
