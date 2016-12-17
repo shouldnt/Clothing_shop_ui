@@ -1,4 +1,20 @@
 $primary: #00b1b3
+@import 'bg'
+@import 'global'
+
+.link
+    padding: 20px
+    a 
+        padding: 10px 20px
+        text-decoration: none
+        background: white
+        color: $grey
+
+        &:hover
+            background: #6f6363
+            color: white
+
+
 
 
 .img-responsive
@@ -11,13 +27,21 @@ $primary: #00b1b3
     width: 40px
     height: 40px
 
+.products
+    display: flex
+    flex-wrap: wrap
+    margin: -10px 0 0 -10px
+
 .product-item 
+    display: inline-block
     position: relative 
     min-height: 1px 
-    padding-left: 15px 
-    padding-right: 15px 
-    width: (100% / 7)
+    margin: 10px 0 0 10px
+    padding: 5px 5px
+    width: calc(100% * (1/5) - 10px - 1px)
     float: left
+    background: white
+    flex-grow: 1
 
 
 .product-detail 
