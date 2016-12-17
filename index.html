@@ -1,88 +1,60 @@
 <!doctype html>
 <html>
-	
 	<head>
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/font-awesome.css">
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="./css/normalize.css">
+		<link rel="stylesheet" href="./css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 	</head>
 	<body>
-		
-	<div id="app">
-		
-		<div class = "link">
-			
-			<a href="./pages/footer.html">FOOTER</a>
-			<a href="./pages/Bag.html">BAG</a>
-			<a href="./pages/product_detail.html">PRODUCT</a>
+		<div class="top-bar">
+			<div class="bar__item bar__logo">
+				<p><span>E</span>SHOP</p>
+			</div>
+			<div class="bar__item bar__hotline">
+				<p><span>HOTLINE</span> PHONE NUMBER</p>
+			</div>
+			<div class="bar__item bar__button">
+				<button>Đăng nhập</button>
+				<button>Đăng ký</button>
 
+			</div>
 		</div>
-
-		<div class="products">
-			<div v-for="n in 10" class="product-item shadow">
-				<div class="product-detail">
-
-					<div class="left-block">				
-						<div class="product-image">
-							<img class="img-responsive" src="./images/temp.jpg" alt="temp">
-							<span class="product-additional">
-								<img class="img-responsive" src="./images/temp-additional.jpg" alt="">
-							</span>
-						</div>
-
-						<div class="cart">
-							<a href="#" class="button" >
-								<i class="fa fa-shopping-card"></i>
-								<span>ADD TO CART</span>
-							</a>
-						</div>
-
-						<div class="functional">
-							<div class="compare">
-								<a href="#" class="btn-product">
-									<i class="fa fa-clone"></i>
-									<span>COMPARE</span>
-								</a>
-							</div>
-
-							<div class="wishlist">
-								<a href="#">
-									<i class="fa fa-heart-o"></i>
-									<span>ADD TO WISH LIST</span>
-								</a>
-							</div>
-
-							<div class="quickview">
-								<a href="#">
-									<i class="fa fa-eye"></i>
-									<span>QUICK VIEW</span>
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="right-block">
-						<div class="product-meta">
-							<h5 class="name">Name of product</h5>
-
-							<div class="hook-reviews">
-								
-							</div>
-
-							<div class="content-price">
-								<span>$100.00</span>
-							</div>
-						</div>
-					</div>
+		
+		<div class="container">
+			
+			<div class="wrap">
+				<div class="main-menu panel">
+					<ul>
+						<li><a href="#">Áo sơ mi nữ</a></li>
+						<li><a href="#">Váy đầm</a></li>
+						<li><a href="#">Vest nữ</a></li>
+						<li><a href="#">Quần công sở</a></li>
+						<li><a href="#">Chân Váy</a></li>
+						<li><a href="#">Thời trang công sở</a></li>
+						<li><a href="#">Thời trang nữ</a></li>
+					</ul>
 				</div>
+
+				<div class="banner panel">
+					<div class="slide-container">
+						slide go here
+					</div>
+
+					<div class="image-link">
+						image link go here
+					</div>
+					
+				</div>
+
+				<div class="content">
+					
+				</div>
+
 			</div>
 
 		</div>
 
-	</div>
-
-	<script src="./js/vue.js"></script>
-	<script src="./js/main.js"></script>
 	</body>
-
 </html>

@@ -1,6 +1,5 @@
 html, body {
   height: 100%;
-  background: #F1F1F1;
   font-family: "Roboto", sans-serif;
 }
 
@@ -24,6 +23,10 @@ table, th, td {
   border: 1px solid #b0b0b0;
 }
 
+td {
+  padding: 10px 20px;
+}
+
 div {
   color: #555;
 }
@@ -35,6 +38,10 @@ div {
 
 .shadow {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.panel {
+  background-color: white;
 }
 
 .bag {
@@ -103,12 +110,17 @@ div {
   margin: 10px 0;
 }
 
-.list_table tr th {
+.list__table:hover table {
+  display: none;
+}
+.list__table th, .list__table td {
+  padding: 10px 20px;
   border-bottom: 1px solid #eee;
   text-align: left;
   font-size: 13px;
   font-weight: 700;
   color: #000;
+  padding: 10px 15px;
 }
 
 .list__check {

@@ -1,0 +1,51 @@
+@import 'color'
+@import 'bg'
+@import 'global'
+
+.top-bar
+	background: black
+	display: flex 
+	align-items: center
+
+	.bar__item
+		text-align: center
+		flex-grow: 1
+	.bar__logo
+		> p
+			font-size: 3em
+			margin: 20px 0px
+			span
+				font-weight: bold
+				color: $highlight
+	.bar__hotline
+
+	.bar__button
+		button
+			border: none
+			background: white 
+			padding: 10px 20px
+
+.main-menu
+	ul 
+		display: flex
+		list-style-type: none
+		margin: 10px 0px
+		text-align: center
+		padding: 0
+		justify-content: space-between
+
+		border-bottom: 1px solid $grey
+
+		li
+			flex-grow: 1
+			a 
+				display: block
+				text-decoration: none
+				color: $text
+				padding: 20px 20px
+
+				transition: background-color 0.2s ease-in-out
+				&:hover
+					background: $highlight
+					color: white
+
