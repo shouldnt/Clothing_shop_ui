@@ -2,4 +2,6 @@ h3 {
   color: white; }
 
 div {
-  width: 100px; }
+  width: 100px;
+  color: black;
+  background: green; }
