@@ -24,8 +24,9 @@
 	.bar__button
 		button
 			border: none
-			background: white 
+			background: $highlight 
 			padding: 10px 20px
+			color: white
 // main menu
 .main-menu
 	ul 
@@ -138,13 +139,28 @@
 	.block__status
 		position: absolute
 		left: 0
-		top: 0px
-		background: red 
+		top: 5px
+		background: #21a56f
 		color: white
 		padding: 5px 10px
 		p 
 			margin: 0
 			font-size: 0.8em
+		&::before
+			position: absolute
+			content: " "
+			width: 0
+			height: 0
+			border-top: 12px solid transparent
+			border-left: 10px solid #21a56f
+			border-bottom: 12px solid transparent
+			right: -10px
+			top: 0px
+		&.out
+			background: #ffbe00 
+			&::before
+				border-left: 10px solid #ffbe00
+
 
 // product hover handle
 .product__block

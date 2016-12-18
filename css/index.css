@@ -56,11 +56,12 @@ div {
     color: white; }
     .top-bar .bar__logo > p span {
       font-weight: bold;
-      color: #FF4338; }
+      color: #21a56f; }
   .top-bar .bar__button button {
     border: none;
-    background: white;
-    padding: 10px 20px; }
+    background: #21a56f;
+    padding: 10px 20px;
+    color: white; }
 
 .main-menu ul {
   display: -webkit-box;
@@ -86,7 +87,7 @@ div {
       -webkit-transition: background-color 0.2s ease-in-out;
       transition: background-color 0.2s ease-in-out; }
       .main-menu ul li a:hover {
-        background: #FF4338;
+        background: #21a56f;
         color: white; }
 
 .content {
@@ -161,13 +162,13 @@ div {
     .block__top .block__button button {
       width: 100%;
       border: none;
-      background: #FF4338;
+      background: #21a56f;
       padding: 7px;
       text-transform: uppercase;
       font-weight: bold;
       color: white; }
       .block__top .block__button button:hover {
-        background: #eb0d00; }
+        background: #146544; }
   .block__top .block__function {
     position: absolute;
     left: 0;
@@ -185,19 +186,33 @@ div {
         color: #b0b0b0;
         font-size: 0.7em; }
       .block__top .block__function > div:hover {
-        background: #FF4338; }
+        background: #21a56f; }
         .block__top .block__function > div:hover a {
           color: white; }
   .block__top .block__status {
     position: absolute;
     left: 0;
-    top: 0px;
-    background: red;
+    top: 5px;
+    background: #21a56f;
     color: white;
     padding: 5px 10px; }
     .block__top .block__status p {
       margin: 0;
       font-size: 0.8em; }
+    .block__top .block__status::before {
+      position: absolute;
+      content: " ";
+      width: 0;
+      height: 0;
+      border-top: 12px solid transparent;
+      border-left: 10px solid #21a56f;
+      border-bottom: 12px solid transparent;
+      right: -10px;
+      top: 0px; }
+    .block__top .block__status.out {
+      background: #ffbe00; }
+      .block__top .block__status.out::before {
+        border-left: 10px solid #ffbe00; }
 
 .product__block:hover .block__button {
   opacity: 1; }
@@ -268,7 +283,7 @@ div {
     margin-top: 10px;
     margin-bottom: 10px;
     text-decoration: none;
-    color: #FF4338; }
+    color: #21a56f; }
   .block__detail .item.item-rm-left-space i {
     padding-left: 0; }
   .block__detail .item.icon-large i {
