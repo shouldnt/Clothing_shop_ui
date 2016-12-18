@@ -8,61 +8,96 @@ html, body {
 .product {
   width: 1200px;
   margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
   .product > div {
     width: 100%;
     margin-right: 10px; }
 
 .product__image {
-  flex: 1; }
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 .product__detail form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   padding-right: 10px;
   padding-left: 10px; }
   .product__detail form:nth-child(n) {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     color: #505050; }
   .product__detail form .form-control {
     padding: 3px 5px;
     text-align: center; }
 
 .detail_grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 14.28571%; }
   .detail_grid .label {
     position: relative;
-    flex: 3;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
     font-weight: bold; }
     .detail_grid .label::after {
       position: absolute;
       content: ":";
       right: 10px; }
   .detail_grid .info {
-    flex: 7; }
+    -webkit-box-flex: 7;
+        -ms-flex: 7;
+            flex: 7; }
 
 .form_btn {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%; }
   .form_btn button {
     border: none;
     padding: 10px;
     margin-right: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-weight: bold;
     background-color: #67cde2;
     color: white; }
     .form_btn button:hover {
       background-color: #24a4bf; }
     .form_btn button i {
-      flex: 1;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
       padding: 10px; }

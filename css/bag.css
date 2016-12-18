@@ -33,10 +33,18 @@ div {
 .panel {
   background-color: white; }
 
+.responsive-image {
+  width: 100%;
+  height: auto; }
+
 .bag {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: white; }
   .bag:nth-child(n) {
     padding: 20px 20px; }
@@ -46,8 +54,12 @@ div {
 
 .info__title {
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .info__title i {
     color: #FF4338;
     padding: 5px;
@@ -74,8 +86,12 @@ div {
   width: 48%; }
 
 .list__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: bold; }
   .list__title i {
     color: #FF4338;
@@ -107,21 +123,35 @@ div {
   .list__check .total-check ul {
     margin-bottom: 0; }
     .list__check .total-check ul li {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      justify-content: flex-end; }
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
       .list__check .total-check ul li label {
-        flex: 5;
+        -webkit-box-flex: 5;
+            -ms-flex: 5;
+                flex: 5;
         margin-right: 5px; }
       .list__check .total-check ul li p {
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
         text-align: right;
         margin: 10px 0; }
 
 .list__button {
   margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .list__button button {
     border: none;
     padding: 10px 30px;

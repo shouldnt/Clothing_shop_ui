@@ -20,9 +20,13 @@
   },
   "homepage": "https://github.com/shouldnt/Clothing_shop_ui#readme",
   "devDependencies": {
+    "autoprefixer": "^6.5.4",
     "gulp": "^3.9.1",
     "gulp-livereload": "^3.8.1",
     "gulp-notify": "^2.2.0",
-    "gulp-sass": "^3.0.0"
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "lost": "^7.1.1"
   }
 }
