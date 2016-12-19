@@ -108,10 +108,14 @@
 								<div class="item-title">
 									<p>Title here</p>
 									<button @click="toggle">
-										<template v-if="show">Xem thêm</template>
-										<template v-if="!show">Thu gọn</template>
+										<template v-if="show">Xem thêm
+											<i class="fa fa-plus" aria-hidden="true"></i>
+										</template>
+										<template v-if="!show">Thu gọn
+											<i class="fa fa-minus" aria-hidden="true"></i>	
+										</template>
 									
-										<i class="fa fa-plus" aria-hidden="true"></i>
+										
 									
 									</button>
 								</div>

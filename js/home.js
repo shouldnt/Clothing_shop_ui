@@ -10,7 +10,7 @@ var slider = new Vue({
 var product = new Vue({
 	el: '#content__right',
 	data: {
-		show: false,
+		show: true,
 		show_more: {
 			height: '350px',
 			overflow: 'hidden'
