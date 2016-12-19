@@ -1,11 +1,27 @@
 Vue.component('img-slider', {
   template: '#img-slider-template',
   replace: true
+});
+
+var main_menu = new Vue({
+	el: '#main-menu',
+	data: {
+		scrollPosition: null
+	},
+	methods: {
+		updateScroll() {
+			this.scrollPosition = window.scrollY
+		}
+	},
+
+	mounted: function() {
+		window.addEventListener('scroll', this.updateScroll);
+	}
 })
 
 var slider = new Vue({
 	el: '.slide-container'
-})
+});
 
 var product = new Vue({
 	el: '#content__right',
@@ -27,4 +43,4 @@ var product = new Vue({
 		}
 	}
 
-})
+});
