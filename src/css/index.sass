@@ -27,6 +27,10 @@
 			background: $highlight 
 			padding: 10px 20px
 			color: white
+			transition: background-color 0.2s ease-in-out
+			&:hover 
+				background: darken($highlight, 10%)
+				color: black
 // main menu
 .main-menu
 	ul 
@@ -37,7 +41,7 @@
 		padding: 0
 		justify-content: space-between
 
-		border-bottom: 1px solid $grey
+		border-bottom: 1px solid $grey_op
 
 		li
 			flex-grow: 1
@@ -52,27 +56,170 @@
 					background: $highlight
 					color: white
 
+// banner
+.banner 
+	display: flex
+	justify-content: space-between
+
+	.slide_container
+		flex-basis: 80%
+		flex-wrap: wrap
+		width: 800px
+
+	.image-link 
+		flex-basis: 40%
+		display: flex
+		flex-wrap: wrap
+		background: green
+
+		.sale-info
+			flex-basis: 50%
+			margin-bottom: 10px
+			background: blue
+			&.image-info
+				flex-basis: 100%
+			&:nth-of-type(2)
+				margin-bottom: 0
+				margin-right: 10px
+			&:nth-of-type(3)
+				margin-bottom: 0
+
+//slider images
+#slider  
+	max-width: 700px
+	text-align: center 
+	margin: 0 
+	position: relative
+
+ 
+
+#overflow  
+	width: 100% 
+	overflow: hidden 
+ 
+
+#slides 
+	.inner  
+		width: 400% 
+	img 
+		display: block
+
+ 
+.slide-indicate
+	width: 100%
+	position: absolute 
+	bottom: 5px
+	text-align: center
+
+#slides 
+	.inner
+		transform: translateZ(0) 
+
+		transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000)  
+		transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000) 
+ 
+
+#slides article  
+	width: 25% 
+	float: left 
+ 
+
+#slide1:checked ~ #slides .inner  
+	margin-left: 0 
+ 
+
+#slide2:checked ~ #slides .inner  
+	margin-left: -100% 
+ 
+
+#slide3:checked ~ #slides .inner  
+	margin-left: -200% 
+ 
+
+#slide4:checked ~ #slides .inner  
+	margin-left: -300% 
+ 
+
+input[type="radio"]  
+	display: none 
+ 
+
+label  
+	background: #CCC 
+	display: inline-block 
+	cursor: pointer 
+	width: 10px 
+	height: 10px 
+	border-radius: 5px 
+ 
+
+#slide1:checked ~ label[for="slide1"],
+#slide2:checked ~ label[for="slide2"],
+#slide3:checked ~ label[for="slide3"],
+#slide4:checked ~ label[for="slide4"]  
+	background: #333 
+
+
 
 // content
 .content
 	display: flex
-	border-top: 1px solid $grey
+	border-top: 1px solid $grey_op
 	margin-top: 10px
 	padding-top: 10px
 
 .content__left
 	width: 30%
 	flex-grow: 1
+	margin-right: 10px
+	padding-right: 10px
+	border-right: 1px solid $grey_op
 
-.content__right
+#content__right
 	flex-row: 1
 	width: 70%
 
-.products
-	display: flex	
+// content__right
+
+
+.content__right__item
+
+	.item-title
+		display: flex 
+		justify-content: space-between
+		font-weight: bold
+		margin-bottom: 10px
+		
+		p 
+			margin: 0
+			border-box: box-sizing
+			padding: 5px 0
+			font-size: 1.2em
+
+		button
+			border: none
+			font-size: 0.8em
+			padding: 0px 8px
+			background: white 
+			color: darken($grey, 10%)
+			border: 1px solid $grey
+			&:hover 
+				background: $highlight 
+				color: white
+
+
+.products	
+	display: flex
 	flex-wrap: wrap
 	padding: -10px 0 0 -10px
-
+	z-index: 100
+	&.show-more
+		heigth: auto
+		overflow: visible
+	&.show-less
+		heigth: 100px 
+		overflow: hidden
+	
 .product__block
 	position: relative
 	z-index: 200
@@ -230,12 +377,15 @@
 
 
 // footer
+footer 
+	z-index: 9999
 .footer-wrap
 	background: white
 	padding-left: 100px
 	padding-right: 100px
 	display: flex
-	border-top: 1px solid $grey
+	border-top: 1px solid $grey_op
+	margin-top: 10px
 
 
 .footer__block

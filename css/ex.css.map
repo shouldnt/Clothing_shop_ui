@@ -1,1 +1,0 @@
-{"version":3,"sources":["ex.sass"],"names":[],"mappings":"AAAA;EACC,aAAY,EAAI;;AAEjB;EACC,aAAY;EACZ,aAAY;EACZ,kBAAiB,EAAI","file":"ex.css","sourcesContent":["h3 {\n\tcolor: white; }\n\ndiv {\n\twidth: 100px;\n\tcolor: black;\n\tbackground: green; }\n"]}

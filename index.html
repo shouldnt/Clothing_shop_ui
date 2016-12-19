@@ -39,12 +39,60 @@
 				</div>
 
 				<div class="banner ">
+					<template id="img-slider-template">
+					  <div id="slider">
+					    <input checked="" type="radio" name="slider" id="slide1" selected="false">
+					    <input type="radio" name="slider" id="slide2" selected="false">
+					    <input type="radio" name="slider" id="slide3" selected="false">
+					    <input type="radio" name="slider" id="slide4" selected="false">
+					    <div id="slides">
+					      <div id="overflow">
+					        <div class="inner">
+					          <article>
+					            <img class="responsive-image" src="./images/slide_img.jpg">
+					          </article>
+					          <article>
+					            <img class="responsive-image" src="./images/slide_img.jpg">
+					          </article>
+					          <article>
+					            <img class="responsive-image" src="./images/slide_img.jpg">
+					          </article>
+					          <article>
+					            <img class="responsive-image" src="./images/slide_img.jpg">
+					          </article>
+					        </div> <!-- .inner -->
+					      </div> <!-- #overflow -->
+					    </div>
+					    <div class="slide-indicate">					    	
+						    <label for="slide1"></label>
+						    <label for="slide2"></label>
+						    <label for="slide3"></label>
+						    <label for="slide4"></label>
+					    </div>
+					  </div>
+					</template>
+
 					<div class="slide-container">
-						slide go here
+						 <img-slider>
+						 </img-slider>
 					</div>
 
 					<div class="image-link">
-						image link go here
+						<div class="imgae-link__item">
+							<div class="sale-info">
+								aaa
+							</div>
+							<div class="sale-info">
+								aaa
+							</div>
+						</div>
+
+						<div class="imgae-link__item">
+							<div class="sale-info image-info">
+								aaaa							
+								<img src="#" alt="">
+							</div>
+						</div>
 					</div>
 					
 				</div>
@@ -54,71 +102,162 @@
 							side content
 						</div>
 
-						<div class="content__right">
-							<div class="products">
-								<div class="product__block " v-for="n in 10">
-									<div class="block__top">
-										<div class="block__image">
-											<img src="./images/temp.jpg" alt="" class="responsive-image">
-											<div class="addition">
-												<img src="./images/temp-additional.jpg" alt="" class="responsive-image">
-											</div>
-										</div>
+						<div id="content__right">
 
-										<div class="block__button">
-											<button>Add to cart</button>
-										</div>
-
-										<div class="block__function">
-											<div class="compare">
-												<a href="#">
-													<i class="fa fa-clone"></i>
-												</a>
-												<span>Thêm vào so sánh</span>
-											</div>
-
-											<div class="wish-list">
-												<a href="#">
-													<i class="fa fa-heart-o"></i>
-												</a>
-												<span>Thêm vào yêu thích</span>
-											</div>
-
-											<div class="quick-view">
-												<a href="#">
-													<i class="fa fa-eye"></i>
-												</a>
-												<span>Xem nhanh</span>
-											</div>	
-										</div>
-
-										<div class="block__status">
-											<p>Còn hàng</p>
-										</div>
-
-																			
-									</div>
-
-									<div class="block__bottom">
-										<div class="block__comment block__bottom-item">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star-half-o"></i>
-											<i class="fa fa-star-o"></i>
-											<i class="fa fa-star-o"></i>
-										</div>
-
-										<div class="block__desc block__bottom-item">
-											Áo ......
-										</div>
-
-										<div class="block__price block__bottom-item">
-											<p>200.000 đ</p>
-										</div>
-
-									</div>
+							<div class="content__right__item">
+								<div class="item-title">
+									<p>Title here</p>
+									<button @click="toggle">
+										<template v-if="show">Xem thêm</template>
+										<template v-if="!show">Thu gọn</template>
+									
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									
+									</button>
 								</div>
+								<div class="products" :style="show?show_more : show_less">
+									<div class="product__block " v-for="n in 10">
+										<div class="block__top">
+											<div class="block__image">
+												<img src="./images/temp.jpg" alt="" class="responsive-image">
+												<div class="addition">
+													<img src="./images/temp-additional.jpg" alt="" class="responsive-image">
+												</div>
+											</div>
 
+											<div class="block__button">
+												<button>Add to cart</button>
+											</div>
+
+											<div class="block__function">
+												<div class="compare">
+													<a href="#">
+														<i class="fa fa-clone"></i>
+													</a>
+													<span>Thêm vào so sánh</span>
+												</div>
+
+												<div class="wish-list">
+													<a href="#">
+														<i class="fa fa-heart-o"></i>
+													</a>
+													<span>Thêm vào yêu thích</span>
+												</div>
+
+												<div class="quick-view">
+													<a href="#">
+														<i class="fa fa-eye"></i>
+													</a>
+													<span>Xem nhanh</span>
+												</div>	
+											</div>
+
+											<div class="block__status">
+												<p>Còn hàng</p>
+											</div>
+
+																				
+										</div>
+
+										<div class="block__bottom">
+											<div class="block__comment block__bottom-item">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star-half-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+											</div>
+
+											<div class="block__desc block__bottom-item">
+												Áo ......
+											</div>
+
+											<div class="block__price block__bottom-item">
+												<p>200.000 đ</p>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="content__right__item">
+								<div class="item-title">
+									<p>Title here</p>
+									<button @click="toggle">
+										<template v-if="show">Xem thêm</template>
+										<template v-if="!show">Thu gọn</template>
+									
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									
+									</button>
+								</div>
+								<div class="products" :style="show?show_more : show_less">
+									<div class="product__block " v-for="n in 10">
+										<div class="block__top">
+											<div class="block__image">
+												<img src="./images/temp.jpg" alt="" class="responsive-image">
+												<div class="addition">
+													<img src="./images/temp-additional.jpg" alt="" class="responsive-image">
+												</div>
+											</div>
+
+											<div class="block__button">
+												<button>Add to cart</button>
+											</div>
+
+											<div class="block__function">
+												<div class="compare">
+													<a href="#">
+														<i class="fa fa-clone"></i>
+													</a>
+													<span>Thêm vào so sánh</span>
+												</div>
+
+												<div class="wish-list">
+													<a href="#">
+														<i class="fa fa-heart-o"></i>
+													</a>
+													<span>Thêm vào yêu thích</span>
+												</div>
+
+												<div class="quick-view">
+													<a href="#">
+														<i class="fa fa-eye"></i>
+													</a>
+													<span>Xem nhanh</span>
+												</div>	
+											</div>
+
+											<div class="block__status">
+												<p>Còn hàng</p>
+											</div>
+
+																				
+										</div>
+
+										<div class="block__bottom">
+											<div class="block__comment block__bottom-item">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star-half-o"></i>
+												<i class="fa fa-star-o"></i>
+												<i class="fa fa-star-o"></i>
+											</div>
+
+											<div class="block__desc block__bottom-item">
+												Áo ......
+											</div>
+
+											<div class="block__price block__bottom-item">
+												<p>200.000 đ</p>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
 							</div>
 						</div>
 				</div>
@@ -153,7 +292,7 @@
 
 						<div class="item icon-large">
 							<i class="fa fa-clock-o"></i>
-							<p>Thời gian làm việc: day time</p>
+							<p>Thời gian làm việc: datetime</p>
 						</div>
 					</div>
 				</div>		

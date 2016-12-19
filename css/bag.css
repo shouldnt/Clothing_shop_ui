@@ -61,7 +61,7 @@ div {
       -ms-flex-align: center;
           align-items: center; }
   .info__title i {
-    color: #21a56f;
+    color: #2cc17e;
     padding: 5px;
     font-size: 2em; }
   .info__title p {
@@ -94,7 +94,7 @@ div {
           align-items: center;
   font-weight: bold; }
   .list__title i {
-    color: #21a56f;
+    color: #2cc17e;
     padding: 5px;
     font-size: 2em; }
   .list__title p {
@@ -162,7 +162,7 @@ div {
     color: black;
     font-weight: bold; }
     .list__button button.highlight {
-      background-color: #21a56f;
+      background-color: #2cc17e;
       color: white; }
     .list__button button:hover {
       background-color: #dbdbdb;
