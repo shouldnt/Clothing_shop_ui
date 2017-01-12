@@ -1,9 +1,9 @@
-var data = {
+var somi_data = {
 
 	cloths: [
 		{
 			id: 1,
-			img: "/imgs/1.jpg",
+			img: "/img/1.jpg",
 			name: "Áo Sơ Mi Trắng cổ tròn xuân hè 2017",
 			price: 350000,
 			sale: 20,
@@ -11,7 +11,7 @@ var data = {
 		},
 		{
 			id: 2,
-			img: "/imgs/2.jpg",
+			img: "/img/2.jpg",
 			name: "Áo Sơ Mi nữ dài tay màu pastel (hồng/xanh)",
 			price: 350000,
 			sale: 20,
@@ -20,7 +20,7 @@ var data = {
 
 		{
 			id: 3,
-			img: "/imgs/3.jpg",
+			img: "/img/3.jpg",
 			name: "Áo Sơ Mi cổ đức chấm bi nhỏ",
 			price: 350000,
 			sale: 20,
@@ -29,7 +29,7 @@ var data = {
 
 		{
 			id: 4,
-			img: "/imgs/4.jpg",
+			img: "/img/4.jpg",
 			name: "áo sơ mi voan hoa dài tay",
 			price: 360000,
 			sale: 20,
@@ -38,7 +38,7 @@ var data = {
 
 		{
 			id: 5,
-			img: "/imgs/5.jpg",
+			img: "/img/5.jpg",
 			name: "áo sơ mi voan lụa màu pastel",
 			price: 350000,
 			sale: 20,

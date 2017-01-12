@@ -49,12 +49,12 @@
 			</section>
 
 			<section class="products">				
-				<div class="product__block " v-for="n in 10">
+				<div class="product__block " v-for="cloth in cloths">
 					<div class="block__top">
 						<div class="block__image">
-							<img src="../images/temp.jpg" alt="" class="responsive-image">
+							<img :src="cloth.img" alt="" class="responsive-image">
 							<div class="addition">
-								<img src="../images/temp-additional.jpg" alt="" class="responsive-image">
+								<img :src="cloth.img" alt="" class="responsive-image">
 							</div>
 						</div>
 
@@ -102,11 +102,11 @@
 						</div>
 
 						<div class="block__desc block__bottom-item">
-							Áo ......
+							{{cloth.name}}
 						</div>
 
 						<div class="block__price block__bottom-item">
-							<p>200.000 đ</p>
+							<p>{{cloth.price - cloth.price * (cloth.sale / 100)}} Đ</p>
 						</div>
 					</div>
 				</div>
@@ -215,9 +215,17 @@
 	</body>
 
 	
-	<script src="/js/data/somi-nu.js"></script>
+	<script src="/js/data/somi_nu.js"></script>
 	<script src="/js/vue.js"></script>
-	<script src=""
+	<script>
+		new Vue({
+			el: ".products",
+			data: {
+				cloths: somi_data.cloths
+			}
+		})
+
+	</script>
 	
 
 	<footer>
