@@ -15,7 +15,9 @@
 	<body>		
 		<header class="top-bar">
 			<div class="bar__item bar__logo">
-				<p><span>E</span>SHOP</p>
+				<a href="../index.html">
+					<p><span>E</span>SHOP</p>
+				</a>
 			</div>
 			<div class="bar__item bar__hotline">
 				<p><span>HOTLINE</span> PHONE NUMBER</p>
@@ -222,6 +224,22 @@
 			el: ".products",
 			data: {
 				cloths: somi_data.cloths
+			}
+		});
+
+		var main_menu = new Vue({
+			el: '#main-menu',
+			data: {
+				scrollPosition: null
+			},
+			methods: {
+				updateScroll() {
+					this.scrollPosition = window.scrollY
+				}
+			},
+
+			mounted: function() {
+				window.addEventListener('scroll', this.updateScroll);
 			}
 		})
 

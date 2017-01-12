@@ -48,6 +48,7 @@
 		width: 30px		
 		opacity: 0
 		transition: opacity 0.2s ease-in-out
+		background: fade-out($highlight, 0.7)
 
 		> div
 			position: relative
@@ -56,8 +57,11 @@
 			transition: background 0.2s ease-in-out
 
 			a 
-				color: $grey
+				color: white
 				font-size: 0.7em
+				.fa 
+					color: white
+					font-weight: 50
 
 			> span 
 				display: none

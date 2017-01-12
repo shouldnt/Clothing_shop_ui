@@ -15,7 +15,9 @@
 	<body>		
 		<header class="top-bar">
 			<div class="bar__item bar__logo">
-				<p><span>E</span>SHOP</p>
+				<a href="../index.html">
+					<p><span>E</span>SHOP</p>
+				</a>
 			</div>
 			<div class="bar__item bar__hotline">
 				<p><span>HOTLINE</span> PHONE NUMBER</p>
@@ -42,20 +44,21 @@
 			
 			<section class="nav-address">
 				<a href="../index.html">home</a>
-				<a href="#">Áo sơ mi nữ</a>
+				>
+				<a href="#">Vấy Đầm</a>
 			</section>
 
 			<section class="title">
-				<h3>Áo sơ mi nữ</h3>
+				<h3>VÁY ĐẦM</h3>
 			</section>
 
 			<section class="products">				
-				<div class="product__block " v-for="n in 10">
+				<div class="product__block " v-for="cloth in cloths">
 					<div class="block__top">
 						<div class="block__image">
-							<img src="../images/temp.jpg" alt="" class="responsive-image">
+							<img :src="'..' + cloth.img" alt="" class="responsive-image">
 							<div class="addition">
-								<img src="../images/temp-additional.jpg" alt="" class="responsive-image">
+								<img :src="'..' + cloth.img" alt="" class="responsive-image">
 							</div>
 						</div>
 
@@ -103,11 +106,11 @@
 						</div>
 
 						<div class="block__desc block__bottom-item">
-							Áo ......
+							{{cloth.name}}
 						</div>
 
 						<div class="block__price block__bottom-item">
-							<p>200.000 đ</p>
+							<p>{{cloth.price - cloth.price * cloth.sale / 100}} Đ</p>
 						</div>
 					</div>
 				</div>
@@ -219,7 +222,33 @@
 
 	<script src="../js/vue.js"></script>
 
-	<script src="../js/ao-somi-nu.js"></script>
+	<script src="../js/vay_dam.js"></script>
+
+	<script>
+		new Vue({
+			el: ".products",
+
+			data: vay_dam
+
+		});
+
+		var main_menu = new Vue({
+			el: '#main-menu',
+			data: {
+				scrollPosition: null
+			},
+			methods: {
+				updateScroll() {
+					this.scrollPosition = window.scrollY
+				}
+			},
+
+			mounted: function() {
+				window.addEventListener('scroll', this.updateScroll);
+			}
+		});
+
+	</script>
 
 	<footer>
 		

@@ -15,7 +15,9 @@
 	<body>		
 		<header class="top-bar">
 			<div class="bar__item bar__logo">
-				<p><span>E</span>SHOP</p>
+				<a href="../index.html">
+					<p><span>E</span>SHOP</p>
+				</a>
 			</div>
 			<div class="bar__item bar__hotline">
 				<p><span>HOTLINE</span> PHONE NUMBER</p>
@@ -36,17 +38,17 @@
 					<li><a href="./quan-cong-so.html">Quần công sở</a></li>
 					<li><a href="./chan-vay.html">Chân Váy</a></li>
 					<li><a href="./thoi-trang-cong-so.html">Thời trang công sở</a></li>
-					<li><a href="./thoi-trang-nu.html">Thời trang nữ</a></li>/li>
+					<li><a href="./thoi-trang-nu.html">Thời trang nữ</a></li>
 				</ul>
 			</section>
 			
 			<section class="nav-address">
 				<a href="/">home</a>
-				<a href="#">Áo sơ mi nữ</a>
+				<a href="#">Vest Nữ</a>
 			</section>
 
 			<section class="title">
-				<h3>Áo sơ mi nữ</h3>
+				<h3>VEST NỮ</h3>
 			</section>
 
 			<section class="products">				
@@ -227,7 +229,23 @@
 			el: ".products",
 
 			data: vest_nu
-		})
+		});
+
+		var main_menu = new Vue({
+			el: '#main-menu',
+			data: {
+				scrollPosition: null
+			},
+			methods: {
+				updateScroll() {
+					this.scrollPosition = window.scrollY
+				}
+			},
+
+			mounted: function() {
+				window.addEventListener('scroll', this.updateScroll);
+			}
+		});
 
 	</script>
 
