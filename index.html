@@ -99,8 +99,7 @@
 						</div>
 
 						<div id="content__right">
-							<content-item v-for="n in 5"></content-item>
-							
+							<content-item v-for="data in $data" :cloths="data"></content-item>							
 						</div>
 				</div>
 
@@ -223,9 +222,9 @@
 				<div class="product__block " v-for="n in 10">
 					<div class="block__top">
 						<div class="block__image">
-							<img src="./images/temp.jpg" alt="" class="responsive-image">
+							<img :src="'.' + cloths[n].img" alt="" class="responsive-image">
 							<div class="addition">
-								<img src="./images/temp-additional.jpg" alt="" class="responsive-image">
+								<img :src="'.' + cloths[n].img" alt="" class="responsive-image">
 							</div>
 						</div>
 
@@ -273,11 +272,11 @@
 						</div>
 
 						<div class="block__desc block__bottom-item">
-							Áo ......
+							{{cloths[n].name}}
 						</div>
 
 						<div class="block__price block__bottom-item">
-							<p>200.000 đ</p>
+							{{(cloths[n].price - cloths[n].price * cloths[n].sale / 100) | vnd }} Đ
 						</div>
 
 					</div>
@@ -286,10 +285,24 @@
 		</div>
 	</template>
 
+	<script src="./js/vay_dam.js"></script>
+	<script src="./js/quan.js"></script>
+	<script src="./js/chan_vay.js"></script>
+
+	<script src="./js/data/somi_nu.js"></script>
+	<script src="./js/data/vest_nu.js"></script>
 
 	<script src="./js/vue.js"></script>
 
+	<script>
+		
+
+	</script>
+
 	<script src="./js/home.js"></script>
+
+	
+
 
 	</body>
 </html>
