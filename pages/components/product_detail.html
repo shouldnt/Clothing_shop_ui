@@ -2,19 +2,64 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="../css/product-detail.css">
-		<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+		<link rel="stylesheet" href="../../css/product-detail.css">
+		<link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
 	</head>
 	<body>
+		<header class="top-bar">
+			<div class="bar__item bar__logo">
+				<a href="../../index.html">
+					<p><span>E</span>SHOP</p>
+				</a>
+				
+			</div>
+			<div class="bar__item bar__hotline">
+				<p><span>HOTLINE</span> PHONE NUMBER</p>
+			</div>
+			<div class="bar__item bar__button">
+				<button>Đăng nhập</button>
+				<button>Đăng ký</button>
+				
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="wrap">
+				<div id="main-menu" :class="{'fix-top': scrollPosition >100}" >
+					<ul>
+						<li><a href="../ao-somi-nu.html">Áo sơ mi nữ</a></li>
+						<li><a href="../vay-dam.html">Váy đầm</a></li>
+						<li><a href="../vest-nu.html">Vest nữ</a></li>
+						<li><a href="../quan-cong-so.html">Quần công sở</a></li>
+						<li><a href="../chan-vay.html">Chân Váy</a></li>
+						<li><a href="../thoi-trang-cong-so.html">Thời trang công sở</a></li>
+						<li><a href="../thoi-trang-nu.html">Thời trang nữ</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
 		
 		<div class="product">
 			
-			<div class="product__img">
-				<img class="img-responsive" src="../images/product_detail.jpg" alt="detail">
+			<div id="product__img">
+				<img class="img-responsive" :src="'../..' + current_img" alt="detail">
+				
+				<div class="more__img">
+					<div class="img-item" v-for="img in imgs" @click="current_img = img">
+						<img :src="img" alt="">
+					</div>
+						
+					
+				</div>
+
 			</div>
 
 			<div class="product__detail">
 				<form action="#">
+					<div class="detail_grid">
+						<h4>THÔNG TIN SẢN PHẨM</h3>
+					</div>
 
 					<div class="detail_grid">
 						<div class="label">Mã số</div>
@@ -23,17 +68,20 @@
 
 					<div class="detail_grid">
 						<div class="label">Trạng thái</div>
-						<div class="info">QSK-276</div>
+						<div class="info">Mới về</div>
 					</div>
 
 					<div class="detail_grid">
 						<div class="label">Size</div>
-						<div class="info">QSK-276</div>
-					</div>
+						<div class="info">
+							<select name="" id="" >
+								<option value="S">S</option>
+								<option value="M">M</option>
+								<option value="L">L</option>
+								<option value="XL">XL</option>
+							</select>
 
-					<div class="detail_grid">
-						<div class="label">Màu sắc</div>
-						<div class="info">QSK-276</div>
+						</div>
 					</div>
 
 					<div class="detail_grid">
@@ -45,10 +93,15 @@
 
 					<div class="detail_grid">
 						<div class="label">Giá</div>
-						<div class="info">QSK-276</div>
+						<div class="info">1350000 Đ</div>
 					</div>
 
-					<div class="form_btn">
+					<div class="detail_grid">
+						<div class="label">Giá khuyến mại 20%</div>
+						<div class="info">945000 Đ</div>
+					</div>
+
+					<div class=" detail_grid form_btn">
 						<button>
 							<i class="fa fa-heart-o"></i>
 							Đặt ngay, Giao tận nơi
@@ -68,6 +121,142 @@
 
 		</div>
 
+
+		<footer>
+			<div class="footer-wrap">
+				
+				<div class="footer__block">
+					<div class="block__title">
+						<h3> THÔNG TIN SHOP</h3>
+					</div>
+
+					<div class="block__detail">
+						<div class="item icon-large">
+							<i class="fa fa-map-marker"></i>
+							<p>Mua hàng: Address</p>
+						</div>
+
+						<div class="item icon-large">
+							<i class="fa fa-phone"></i>
+							<p>Hotline: phone number</p>
+						</div>
+
+						<div class="item icon-large">
+							<i class="fa fa-envelope"></i>
+							<p>Email: email</p>
+						</div>
+
+						<div class="item icon-large">
+							<i class="fa fa-clock-o"></i>
+							<p>Thời gian làm việc: datetime</p>
+						</div>
+					</div>
+				</div>		
+
+				<div class="footer__block">
+					<div class="block__title">
+						<h3>HƯỚNG DẪN MUA HÀNG</h3>
+					</div>
+
+					<div class="block__detail">
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Chính sách bảo mật</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Quy chế hoạt động</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Tài khoảng giao dịch</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Đổi hàng trong 7 ngày</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Chính sách khách hàng sỉ</a>
+						</div>
+					</div>
+				</div>	
+
+				<div class="footer__block">
+					<div class="block__title">
+						<h3>GOOGLE MAP</h3>
+					</div>
+
+					<div class="block__detail">
+						<div class="item">
+							<h3>MAP</h3>
+						</div>
+					</div>
+				</div>	
+
+			</div>
+
+			<div class="social">
+				<p>Copyright: something here</p>
+				<div class="social__icon">
+					<div class="icon-box">
+						<i class="fa fa-facebook"></i>
+					</div>
+
+					<i class="fa fa-cc-master"></i>
+
+					<i class="fa fa-credit-card-alt"></i>
+
+					<i class="fa fa-cc-paypal"></i>
+
+					<i class="fa fa-cc-visa"></i>
+				</div>
+			</div>
+			
+		</footer>
+		
+		<script src="../../js/vue.js"></script>
+
+		<script>
+			
+			new Vue({	
+				el: "#product__img",
+
+				data: {
+					current_img: '/img/cart/1.jpg',
+					imgs: [
+						'/img/cart/1.jpg',
+						'/img/cart/2.jpg',
+						'/img/cart/3.jpg',
+						'/img/cart/4.jpg',
+						'/img/cart/5.jpg',
+						'/img/cart/6.jpg',
+					]
+				}
+
+			});
+
+			var main_menu = new Vue({
+			el: '#main-menu',
+			data: {
+				scrollPosition: null
+			},
+			methods: {
+				updateScroll() {
+					this.scrollPosition = window.scrollY
+				}
+			},
+
+			mounted: function() {
+				window.addEventListener('scroll', this.updateScroll);
+			}
+		});
+
+		</script>
 
 	</body>
 

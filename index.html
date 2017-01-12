@@ -222,10 +222,12 @@
 				<div class="product__block " v-for="n in 10">
 					<div class="block__top">
 						<div class="block__image">
-							<img :src="'.' + cloths[n].img" alt="" class="responsive-image">
-							<div class="addition">
+							<a href="./pages/components/product_detail.html">
 								<img :src="'.' + cloths[n].img" alt="" class="responsive-image">
-							</div>
+								<div class="addition">
+									<img :src="'.' + cloths[n].img" alt="" class="responsive-image">
+								</div>
+							</a>
 						</div>
 
 						<div class="block__button">

@@ -11,13 +11,15 @@ h1, h2, h3, h4, h5, h6 {
 div {
   color: #555; }
 
-.wrap {
+.footer-wrap {
   background: white;
   padding-left: 100px;
   padding-right: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  border-top: 1px solid rgba(176, 176, 176, 0.2);
+  margin-top: 10px; }
 
 .footer__block {
   display: -webkit-box;

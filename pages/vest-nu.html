@@ -55,11 +55,14 @@
 				<div class="product__block " v-for="cloth in cloths">
 					<div class="block__top">
 						<div class="block__image">
-							<img :src="'..' + cloth.img" alt="" class="responsive-image">
-							<div class="addition">
+							<a href="./components/product_detail.html">
 								<img :src="'..' + cloth.img" alt="" class="responsive-image">
-							</div>
+								<div class="addition">
+									<img :src="'..' + cloth.img" alt="" class="responsive-image">
+								</div>
+							</a>
 						</div>
+
 
 						<div class="block__button">
 							<button>Add to cart</button>
@@ -109,7 +112,7 @@
 						</div>
 
 						<div class="block__price block__bottom-item">
-							<p>200.000 đ</p>
+							<p>{{cloth.price - cloth.price * cloth.sale / 100}} Đ</p>
 						</div>
 					</div>
 				</div>
