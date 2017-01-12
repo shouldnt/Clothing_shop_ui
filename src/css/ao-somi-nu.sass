@@ -1,0 +1,114 @@
+@import 'global'
+
+// top bar 
+@import 'components/top-bar'
+
+
+// main menu
+@import 'components/main-menu'
+
+//product carts
+.products
+	display: flex
+	flex-wrap: wrap
+	padding: -10px 0 0 -10px
+	z-index: 100
+	&.show-more
+		heigth: auto
+		overflow: visible
+	&.show-less
+		heigth: 100px 
+		overflow: hidden
+
+@import 'components/product-cart'
+
+// footer
+footer 
+	z-index: 9999
+.footer-wrap
+	background: white
+	padding-left: 100px
+	padding-right: 100px
+	display: flex
+	border-top: 1px solid $grey_op
+	margin-top: 10px
+
+
+.footer__block
+	display: flex 
+	flex: 1
+	flex-direction: column
+
+	padding-left: 10px
+	padding-right: 10px
+
+.block__title
+	color: none
+
+.block__detail
+	
+	.item
+		display: flex 
+		flex-direction: row
+		align-items: center
+
+		i 
+			text-align: center
+			flex: 1
+			padding: 10px
+
+		p 
+			flex: 7
+
+		a 
+			flex: 7
+			margin-right: 3px
+			margin-top: 10px
+			margin-bottom: 10px
+			text-decoration: none
+
+			color: $highlight
+
+		&.item-rm-left-space
+			i
+				padding-left: 0
+		&.icon-large
+			i 
+				font-size: 2em
+
+.social
+	background: white
+	display: flex 
+	align-items: center
+	justify-content: space-between
+	padding-right: 20px
+	padding-left: 20px
+	margin-top: 10px
+
+.social__icon
+	display: flex
+	justify-content: space-between
+	align-items: center
+	text-align: center
+
+	> i 
+		margin-right: 5px
+		margin-left: 5px
+		font-size: 2em
+		&:hover
+			background: $grey 
+			color: white 
+			border: 1px solid $grey
+
+	.icon-box
+		padding: 5px
+		width: 15px
+		height: 15px
+		border: 1px solid $grey
+
+
+
+		&:hover
+			background: $grey
+			i 
+				color: white

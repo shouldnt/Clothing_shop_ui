@@ -1,0 +1,153 @@
+
+.product__block
+	position: relative
+	z-index: 200
+	box-sizing: border-box
+	lost-column: 1/4 4 10px
+	margin-bottom: 10px
+
+.block__top
+	position: relative
+
+	.block__image
+		position: relative
+		img 
+			display: block
+		.addition
+			height: 100%
+			position: absolute
+			left: 0
+			bottom: 0
+			opacity: 0
+			transition: opacity 0.3s ease-in-out
+		
+	.block__button
+		width: 100%
+		position: absolute
+		bottom: 0
+		opacity: 0
+		transition: opacity 0.2s ease-in-out
+
+		button
+			width: 100%
+			border: none
+			background: $highlight
+			padding: 7px
+			text-transform: uppercase
+			font-weight: bold
+			color: white
+			&:hover
+				background: darken($highlight, 15%)
+
+	.block__function
+		position: absolute
+		left: 0
+		bottom: 35px
+		color: white
+		text-align: center
+		width: 30px		
+		opacity: 0
+		transition: opacity 0.2s ease-in-out
+
+		> div
+			position: relative
+			width: 30px
+			line-height: 30px
+			transition: background 0.2s ease-in-out
+
+			a 
+				color: $grey
+				font-size: 0.7em
+
+			> span 
+				display: none
+				position: absolute
+				opacity: 0
+				background: white
+				width: 100px
+				font-size: 0.7em
+				color: $grey
+				top: -10px
+				left: 35px
+				line-height: 31px
+				transform: scale(1/4, 1/4)
+				transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out
+
+				&::before 
+					display: block
+					position: absolute
+					content: " "
+					width: 0
+					height: 0
+					border-top: 5px solid transparent
+					border-right: 5px solid white
+					border-bottom: 5px solid transparent
+					left: -5px
+					top: 10px
+					
+
+
+			&:hover
+				background: $highlight
+				a 
+					color: white
+				> span 
+					display: block
+					opacity: 0.8
+					transform: scale(1, 1)
+					top: 0
+
+	.block__status
+		position: absolute
+		left: 0
+		top: 5px
+		background: #21a56f
+		color: white
+		padding: 5px 10px
+		p 
+			margin: 0
+			font-size: 0.8em
+		&::before
+			position: absolute
+			content: " "
+			width: 0
+			height: 0
+			border-top: 12px solid transparent
+			border-left: 10px solid #21a56f
+			border-bottom: 12px solid transparent
+			right: -10px
+			top: 0px
+		&.out
+			background: #ffbe00 
+			&::before
+				border-left: 10px solid #ffbe00
+
+
+// product hover handle
+.product__block
+	&:hover
+		.block__button
+			opacity: 1
+			button 
+				z-index: 5
+		.block__image
+			.addition
+				opacity: 1
+
+		.block__function
+			opacity: 1
+
+
+				
+
+
+.block__bottom
+	z-index: 100
+	padding: 0 10px
+
+	.block__bottom-item
+		margin: 0
+		.fa 
+			color: #ffbe00 
+	.block__comment
+		margin: 5px 0

@@ -1,0 +1,228 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/normalize.css">
+		<link rel="stylesheet" href="../css/animate.css">
+		<link rel="stylesheet" href="../css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../css/ao-somi-nu.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	</head>
+	
+
+	<body>		
+		<header class="top-bar">
+			<div class="bar__item bar__logo">
+				<p><span>E</span>SHOP</p>
+			</div>
+			<div class="bar__item bar__hotline">
+				<p><span>HOTLINE</span> PHONE NUMBER</p>
+			</div>
+			<div class="bar__item bar__button">
+				<button>Đăng nhập</button>
+				<button>Đăng ký</button>
+				
+			</div>
+		</header>
+
+		<div class="wrap">
+			<section id="main-menu" :class="{'fix-top': scrollPosition >100}" >
+				<ul>
+					<li><a href="./ao-somi-nu.html">Áo sơ mi nữ</a></li>
+					<li><a href="./vay-dam.html">Váy đầm</a></li>
+					<li><a href="./vest-nu.html">Vest nữ</a></li>
+					<li><a href="./quan-cong-so.html">Quần công sở</a></li>
+					<li><a href="./chan-vay.html">Chân Váy</a></li>
+					<li><a href="./thoi-trang-cong-so.html">Thời trang công sở</a></li>
+					<li><a href="./thoi-trang-nu.html">Thời trang nữ</a></li>/li>
+				</ul>
+			</section>
+			
+			<section class="nav-address">
+				<a href="/">home</a>
+				<a href="#">Áo sơ mi nữ</a>
+			</section>
+
+			<section class="title">
+				<h3>Áo sơ mi nữ</h3>
+			</section>
+
+			<section class="products">				
+				<div class="product__block " v-for="n in 10">
+					<div class="block__top">
+						<div class="block__image">
+							<img src="../images/temp.jpg" alt="" class="responsive-image">
+							<div class="addition">
+								<img src="../images/temp-additional.jpg" alt="" class="responsive-image">
+							</div>
+						</div>
+
+						<div class="block__button">
+							<button>Add to cart</button>
+						</div>
+
+						<div class="block__function">
+							<div class="compare">
+								<a href="#">
+									<i class="fa fa-clone"></i>
+								</a>
+								<span>Thêm vào so sánh</span>
+							</div>
+
+							<div class="wish-list">
+								<a href="#">
+									<i class="fa fa-heart-o"></i>
+								</a>
+								<span>Thêm vào yêu thích</span>
+							</div>
+
+							<div class="quick-view">
+								<a href="#">
+									<i class="fa fa-eye"></i>
+								</a>
+								<span>Xem nhanh</span>
+							</div>	
+						</div>
+
+						<div class="block__status">
+							<p>Còn hàng</p>
+						</div>
+
+															
+					</div>
+
+					<div class="block__bottom">
+						<div class="block__comment block__bottom-item">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+
+						<div class="block__desc block__bottom-item">
+							Áo ......
+						</div>
+
+						<div class="block__price block__bottom-item">
+							<p>200.000 đ</p>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+		</div>	
+
+		<footer>
+			<div class="footer-wrap">
+				
+				<div class="footer__block">
+					<div class="block__title">
+						<h3> THÔNG TIN SHOP</h3>
+					</div>
+
+					<div class="block__detail">
+						<div class="item icon-large">
+							<i class="fa fa-map-marker"></i>
+							<p>Mua hàng: Address</p>
+						</div>
+
+						<div class="item icon-large">
+							<i class="fa fa-phone"></i>
+							<p>Hotline: phone number</p>
+						</div>
+
+						<div class="item icon-large">
+							<i class="fa fa-envelope"></i>
+							<p>Email: email</p>
+						</div>
+
+						<div class="item icon-large">
+							<i class="fa fa-clock-o"></i>
+							<p>Thời gian làm việc: datetime</p>
+						</div>
+					</div>
+				</div>		
+
+				<div class="footer__block">
+					<div class="block__title">
+						<h3>HƯỚNG DẪN MUA HÀNG</h3>
+					</div>
+
+					<div class="block__detail">
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Chính sách bảo mật</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Quy chế hoạt động</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Tài khoảng giao dịch</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Đổi hàng trong 7 ngày</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Chính sách khách hàng sỉ</a>
+						</div>
+					</div>
+				</div>	
+
+				<div class="footer__block">
+					<div class="block__title">
+						<h3>GOOGLE MAP</h3>
+					</div>
+
+					<div class="block__detail">
+						<div class="item">
+							<h3>MAP</h3>
+						</div>
+					</div>
+				</div>	
+
+			</div>
+
+			<div class="social">
+				<p>Copyright: something here</p>
+				<div class="social__icon">
+					<div class="icon-box">
+						<i class="fa fa-facebook"></i>
+					</div>
+
+					<i class="fa fa-cc-master"></i>
+
+					<i class="fa fa-credit-card-alt"></i>
+
+					<i class="fa fa-cc-paypal"></i>
+
+					<i class="fa fa-cc-visa"></i>
+				</div>
+			</div>
+			
+		</footer>
+
+	</body>
+
+	
+
+	<script src="../js/vue.js"></script>
+
+	<script src="../js/ao-somi-nu.js"></script>
+
+	<footer>
+		
+	</footer>
+
+</html>

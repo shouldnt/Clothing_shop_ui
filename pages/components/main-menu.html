@@ -1,0 +1,30 @@
+<div id="main-menu" :class="{'fix-top': scrollPosition >100}" >
+	<ul>
+		<li><a href="#">Áo sơ mi nữ</a></li>
+		<li><a href="#">Váy đầm</a></li>
+		<li><a href="#">Vest nữ</a></li>
+		<li><a href="#">Quần công sở</a></li>
+		<li><a href="#">Chân Váy</a></li>
+		<li><a href="#">Thời trang công sở</a></li>
+		<li><a href="#">Thời trang nữ</a></li>
+	</ul>
+</div>
+
+<script>
+	var main_menu = new Vue({
+		el: '#main-menu',
+		data: {
+			scrollPosition: null
+		},
+		methods: {
+			updateScroll() {
+				this.scrollPosition = window.scrollY
+			}
+		},
+
+		mounted: function() {
+			window.addEventListener('scroll', this.updateScroll);
+		}
+	})
+	
+</script>

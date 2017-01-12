@@ -1,0 +1,101 @@
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif; }
+
+body {
+  margin: 0 0; }
+
+html, body {
+  height: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333; }
+
+table {
+  border-collapse: collapse; }
+
+table, th, td {
+  border: 1px solid #b0b0b0; }
+
+td {
+  padding: 10px 20px; }
+
+div {
+  color: #555; }
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.shadow {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+
+.panel {
+  background-color: white; }
+
+.responsive-image {
+  width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .row.align-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .column:nth-child(1n) {
+    flex-basic: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+
+.fa.fa-google {
+  color: red;
+  font-size: 3em;
+  margin-left: 15px; }
+
+.fa.fa-facebook-square {
+  color: blue;
+  font-size: 3em;
+  margin-left: 15px; }
+
+.container {
+  width: 500px;
+  margin: 5px auto;
+  border: 1px solid #b0b0b0;
+  padding: 0px 10px; }
+  .container .title {
+    border-bottom: 1px solid #b0b0b0; }
+  .container .login {
+    padding: 10px 0;
+    border-bottom: 1px solid #b0b0b0; }
+    .container .login .have-account {
+      margin-bottom: 10px; }
+  .container form {
+    padding: 10px; }
+    .container form > .control {
+      margin-bottom: 15px; }
+    .container form input {
+      padding: 5px 15px; }
+    .container form button {
+      width: 100%;
+      border: none;
+      padding: 10px 0;
+      background: #2cc17e;
+      color: white; }
+      .container form button:hover {
+        background: #196e48; }

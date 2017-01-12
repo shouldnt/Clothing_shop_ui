@@ -1,0 +1,67 @@
+@import 'global'
+
+// reset 
+a 
+	text-decoration: none
+
+//global
+.row 
+	display: flex
+	
+	&.align-center
+		align-items: center
+
+.column 
+	display: flex 
+	flex-direction: column
+	&:nth-child(1n)
+		flex-basic: 1
+		flex-grow: 1
+
+// feature
+.fa.fa-google
+	color: red
+	font-size: 3em
+	margin-left: 15px
+
+.fa.fa-facebook-square
+	color: blue
+	font-size: 3em
+	margin-left: 15px
+
+.container
+	width: 500px
+	margin: 5px auto
+	border: 1px solid $grey
+	padding: 0px 10px
+
+	.title	
+		border-bottom: 1px solid $grey
+
+	.login 
+		padding: 10px 0
+
+		border-bottom: 1px solid $grey
+
+		.have-account
+			margin-bottom: 10px
+		.social-connect
+
+	form 
+		padding: 10px 
+
+		>.control 
+			margin-bottom: 15px
+
+		
+		input 
+			padding: 5px 15px
+
+		button
+			width: 100%
+			border: none
+			padding: 10px 0
+			background: $highlight
+			color: white
+			&:hover
+				background: darken($highlight, 20%)

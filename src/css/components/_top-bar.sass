@@ -1,0 +1,28 @@
+.top-bar
+	background: black
+	display: flex 
+	align-items: center
+
+	.bar__item
+		text-align: center
+		flex-grow: 1
+	.bar__logo
+		> p
+			font-size: 3em
+			margin: 12px 0px
+			color: white
+			span
+				font-weight: bold
+				color: $highlight
+	.bar__hotline
+
+	.bar__button
+		button
+			border: none
+			background: $highlight 
+			padding: 10px 20px
+			color: white
+			transition: background-color 0.2s ease-in-out
+			&:hover 
+				background: darken($highlight, 10%)
+				color: black
