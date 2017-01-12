@@ -37,6 +37,9 @@ div {
   width: 100%;
   height: auto; }
 
+.link-is-active {
+  background: #2cc17e; }
+
 .top-bar {
   background: black;
   display: -webkit-box;
@@ -431,6 +434,8 @@ label {
       color: #ffbe00; }
   .block__bottom .block__comment {
     margin: 5px 0; }
+  .block__bottom .block__desc {
+    text-transform: capitalize; }
 
 footer {
   z-index: 9999; }

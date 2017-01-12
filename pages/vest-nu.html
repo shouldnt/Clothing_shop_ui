@@ -32,7 +32,7 @@
 				<ul>
 					<li><a href="./ao-somi-nu.html">Áo sơ mi nữ</a></li>
 					<li><a href="./vay-dam.html">Váy đầm</a></li>
-					<li><a href="./vest-nu.html">Vest nữ</a></li>
+					<li><a class="link-is-active" href="./vest-nu.html">Vest nữ</a></li>
 					<li><a href="./quan-cong-so.html">Quần công sở</a></li>
 					<li><a href="./chan-vay.html">Chân Váy</a></li>
 					<li><a href="./thoi-trang-cong-so.html">Thời trang công sở</a></li>
@@ -50,12 +50,12 @@
 			</section>
 
 			<section class="products">				
-				<div class="product__block " v-for="n in 10">
+				<div class="product__block " v-for="cloth in cloths">
 					<div class="block__top">
 						<div class="block__image">
-							<img src="../images/temp.jpg" alt="" class="responsive-image">
+							<img :src="'../img/vest_nu' + cloth.img" alt="" class="responsive-image">
 							<div class="addition">
-								<img src="../images/temp-additional.jpg" alt="" class="responsive-image">
+								<img :src="'../img/vest_nu' + cloth.img" alt="" class="responsive-image">
 							</div>
 						</div>
 
@@ -103,7 +103,7 @@
 						</div>
 
 						<div class="block__desc block__bottom-item">
-							Áo ......
+							{{cloth.name}}
 						</div>
 
 						<div class="block__price block__bottom-item">
@@ -219,7 +219,17 @@
 
 	<script src="../js/vue.js"></script>
 
-	<script src="../js/ao-somi-nu.js"></script>
+	<script src="../js/data/vest_nu.js"></script>
+	
+	<script>
+		
+		new Vue({
+			el: ".products",
+
+			data: vest_nu
+		})
+
+	</script>
 
 	<footer>
 		

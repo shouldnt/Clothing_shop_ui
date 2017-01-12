@@ -44,6 +44,9 @@ div {
   width: 100%;
   height: auto; }
 
+.link-is-active {
+  background: #2cc17e; }
+
 .link {
   padding: 20px; }
   .link a {

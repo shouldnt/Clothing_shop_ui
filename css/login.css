@@ -37,6 +37,9 @@ div {
   width: 100%;
   height: auto; }
 
+.link-is-active {
+  background: #2cc17e; }
+
 a {
   text-decoration: none; }
 

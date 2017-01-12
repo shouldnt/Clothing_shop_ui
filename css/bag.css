@@ -44,6 +44,9 @@ div {
   width: 100%;
   height: auto; }
 
+.link-is-active {
+  background: #2cc17e; }
+
 .bag {
   margin-top: 20px;
   display: -webkit-box;
