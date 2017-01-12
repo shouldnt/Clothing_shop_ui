@@ -52,9 +52,9 @@
 				<div class="product__block " v-for="cloth in cloths">
 					<div class="block__top">
 						<div class="block__image">
-							<img :src="cloth.img" alt="" class="responsive-image">
+							<img :src="'..' + cloth.img" alt="" class="responsive-image">
 							<div class="addition">
-								<img :src="cloth.img" alt="" class="responsive-image">
+								<img :src="'..' + cloth.img" alt="" class="responsive-image">
 							</div>
 						</div>
 
@@ -215,8 +215,8 @@
 	</body>
 
 	
-	<script src="/js/data/somi_nu.js"></script>
-	<script src="/js/vue.js"></script>
+	<script src="../js/data/somi_nu.js"></script>
+	<script src="../js/vue.js"></script>
 	<script>
 		new Vue({
 			el: ".products",
