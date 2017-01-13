@@ -1,5 +1,5 @@
 .top-bar
-	background: black
+	background: #333033
 	display: flex 
 	align-items: center
 
@@ -15,14 +15,39 @@
 				font-weight: bold
 				color: $highlight
 	.bar__hotline
+		.done-something-there
 
 	.bar__button
-		button
-			border: none
-			background: $highlight 
-			padding: 10px 20px
+		display: flex
+		.btn 
+			margin-right: 20px
+			display: flex
+			align-items: center
+			text-decoration: none
 			color: white
-			transition: background-color 0.2s ease-in-out
+			//font-weight: bold
+			text-shadow: 0 1px black 
+			.box-and-shadow
+				color: white
+				background: $highlight
+				padding: 10px 15px
+				//box-shadow: 0px 3px darken($highlight, 5%)
+
+				&.left
+					border-top-left-radius: 4px
+					border-bottom-left-radius: 4px
+				&.right
+					border-top-right-radius: 4px
+					border-bottom-right-radius: 4px
+				&.darken-color
+					background: darken($highlight, 5%)
+					//box-shadow: 0px 3px darken($highlight, 10%)
 			&:hover 
-				background: darken($highlight, 10%)
-				color: black
+				.box-and-shadow
+					background: darken($highlight, 5%)
+
+				.darken-color
+					background: darken($highlight, 10%)
+
+	
+
