@@ -11,14 +11,13 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   color: #333; }
 
-table {
+table, th, td {
   border-collapse: collapse; }
 
-table, th, td {
-  border: 1px solid #b0b0b0; }
-
 td {
-  padding: 10px 20px; }
+  border: 1px solid #b0b0b0;
+  padding: 10px 20px;
+  border-collapse: collapse; }
 
 div {
   color: #555; }
@@ -37,6 +36,7 @@ a {
   background-color: white; }
 
 .responsive-image {
+  display: block;
   width: 100%;
   height: auto; }
 

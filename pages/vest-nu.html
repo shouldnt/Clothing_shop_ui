@@ -38,7 +38,46 @@
 					<li><a href="./quan-cong-so.html">Quần công sở</a></li>
 					<li><a href="./chan-vay.html">Chân Váy</a></li>
 					<li><a href="./thoi-trang-cong-so.html">Thời trang công sở</a></li>
-					<li><a href="./thoi-trang-nu.html">Thời trang nữ</a></li>
+					<li class="menu-function">
+							<div class="menu-function-item fav-item">
+								<a href="#"><i class="fa fa-heart"></i></a>
+
+								<div id="simple-fav" class="function-detail">
+									<h3>DETAIL</h3>
+								</div>
+							</div>
+
+							<div class="menu-function-item bag">
+								<i class="fa fa-shopping-basket"></i>
+
+								<div id="simple-bag" class="function-detail">
+									<div class="detail-section">
+										<div class="info-items" v-for="n in 5" >
+											<div class="info-img">
+												<img class="responsive-image" :src="'..' + cloths[n].img" alt="">
+											</div>
+											<div class="info-detail">
+												<p>Tên: {{cloths[n].name}}</p>
+												<div class="size">
+													<p>Size: </p>
+													<select name="" id="" >
+														<option value="S">S</option>
+														<option value="M">M</option>
+														<option value="L">L</option>
+														<option value="XL">XL</option>
+													</select>
+												</div>
+												<p>Giá: {{cloths[n].price - cloths[n].price * cloths[n].sale / 100}} Đ</p>
+											</div>
+										</div>									</div>
+
+									<button>Xem Thêm</button>
+									
+								</div>
+
+							</div>
+
+						</li>
 				</ul>
 			</section>
 			
@@ -237,7 +276,10 @@
 		var main_menu = new Vue({
 			el: '#main-menu',
 			data: {
-				scrollPosition: null
+				scrollPosition: null,
+				cloths: vest_nu.cloths,
+				bag: {},
+				fav: {}
 			},
 			methods: {
 				updateScroll() {

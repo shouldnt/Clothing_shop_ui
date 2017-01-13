@@ -39,16 +39,20 @@ Vue.component('content-item', {
 	}
 })
 
-
+//img-slider-component
 Vue.component('img-slider', {
   template: '#img-slider-template',
   replace: true
 });
 
+// main menu vue instance
 var main_menu = new Vue({
 	el: '#main-menu',
 	data: {
-		scrollPosition: null
+		scrollPosition: null,
+		cloths: vest_nu.cloths,
+		bag: {},
+		fav: {}
 	},
 	methods: {
 		updateScroll() {
@@ -59,8 +63,11 @@ var main_menu = new Vue({
 	mounted: function() {
 		window.addEventListener('scroll', this.updateScroll);
 	}
-})
+});
 
+// menu item vue instance
+
+// slide images
 var slider = new Vue({
 	el: '.slide-container'
 });
