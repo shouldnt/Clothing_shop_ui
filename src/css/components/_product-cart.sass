@@ -158,3 +158,30 @@
 
 	.block__desc
 		text-transform: capitalize
+
+
+
+.pagination
+	display: flex
+	align-items: center
+	.page-number
+		box-sizing: border-box
+		background: $grey
+		padding: 10px 15px
+		margin-right: 5px
+		margin-left: 5px
+
+		color: $text
+		
+		cursor: pointer
+
+		transition: background 0.2s ease-in-out
+
+		&.active
+			background: $highlight
+		&:visited
+			color: $text
+
+		&:hover
+			background: $highlight
+			color: white

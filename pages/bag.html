@@ -1,7 +1,6 @@
 <!doctype html>
-
 <html>
-
+	
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../css/normalize.css">
@@ -10,9 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../css/ao-somi-nu.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 	</head>
-	
 
-	<body>		
+	<body>
+		
 		<header class="top-bar">
 			<div class="bar__item bar__logo">
 				<a href="../index.html">
@@ -45,135 +44,122 @@
 		</header>
 
 		<div class="wrap">
-			<section id="main-menu" :class="{'fix-top': scrollPosition >100}" >
+			
+			<section id="main-menu" :class="{'fix-top': scrollPosition > 200}" >
 				<ul>
 					<li><a href="./ao-somi-nu.html">Áo sơ mi nữ</a></li>
 					<li><a href="./vay-dam.html">Váy đầm</a></li>
-					<li><a href="./vest-nu.html">Vest nữ</a></li>
+					<li><a class="" href="./vest-nu.html">Vest nữ</a></li>
 					<li><a href="./quan-cong-so.html">Quần công sở</a></li>
 					<li><a href="./chan-vay.html">Chân Váy</a></li>
 					<li><a href="./thoi-trang-cong-so.html">Thời trang công sở</a></li>
 					<li class="menu-function">
-							<div class="menu-function-item fav-item">
-								<a href="#"><i class="fa fa-heart"></i></a>
+						<div class="menu-function-item fav-item">
+							<a href="#"><i class="fa fa-heart"></i></a>
 
-								<div id="simple-fav" class="function-detail">
-									<h3>DETAIL</h3>
+							<div id="simple-fav" class="function-detail">
+								<h3>DETAIL</h3>
+							</div>
+						</div>
+
+						<div class="menu-function-item bag">
+							<i class="fa fa-shopping-basket"></i>
+
+							<div id="simple-bag" class="function-detail">
+								<div class="detail-section">
+									<div class="info-items" v-for="n in 5" >
+										<div class="info-img">
+											<a href="./components/product_detail.html">
+												<img class="responsive-image" :src="'..' + cloths[n].img" alt="">
+											</a>
+										</div>
+										<div class="info-detail">
+											<p>Tên: {{cloths[n].name}}</p>
+											<div class="size">
+												<p>Size: </p>
+												<select name="" id="" >
+													<option value="S">S</option>
+													<option value="M">M</option>
+													<option value="L">L</option>
+													<option value="XL">XL</option>
+												</select>
+											</div>
+											<p>Giá: {{cloths[n].price - cloths[n].price * cloths[n].sale / 100}} Đ</p>
+										</div>
+										
+										<div class="close-button">
+											<i class="fa fa-times"></i>
+										</div>
+
+									</div>									
 								</div>
+
+								<button>Xem Thêm</button>
+								
 							</div>
 
-							<div class="menu-function-item bag">
-								<i class="fa fa-shopping-basket"></i>
+						</div>
 
-								<div id="simple-bag" class="function-detail">
-									<div class="detail-section">
-										<div class="info-items" v-for="n in 5" >
-											<div class="info-img">
-												<img class="responsive-image" :src="'./' + cloths[n].img" alt="">
-											</div>
-											<div class="info-detail">
-												<p>Tên: {{cloths[n].name}}</p>
-												<div class="size">
-													<p>Size: </p>
-													<select name="" id="" >
-														<option value="S">S</option>
-														<option value="M">M</option>
-														<option value="L">L</option>
-														<option value="XL">XL</option>
-													</select>
-												</div>
-												<p>Giá: {{cloths[n].price - cloths[n].price * cloths[n].sale / 100}} Đ</p>
-											</div>
-										</div>									</div>
-
-									<button>Xem Thêm</button>
-									
-								</div>
-
-							</div>
-
-						</li>
+					</li>
 				</ul>
 			</section>
-			
+
 			<section class="nav-address">
-				<a href="../index.html">HOME</a>
+				<a href="../index.html">Trang chủ</a>
 				>
-				<a href="#">Thời Trang Nữ</a>
+				<a href="#">Giỏ hàng</a>
 			</section>
 
-			<section class="title">
-				<h3>THỜI TRANG NỮ</h3>
-			</section>
+			<section id="bag__full-info">
+				<table>
+					<tr>
+						<th> Hình ảnh</th>
+						<th> Sản phẩm</th>
+						<th> Đơn giá</th>
+						<th> Số lượng</th>
+						<th>Thành tiền</th>
+						<th></th>
+					</tr>
 
-			<section class="products">				
-				<div class="product__block " v-for="n in 10">
-					<div class="block__top">
-						<div class="block__image">
-							<a href="./components/product_detail.html">
-								<img :src="'..' + cloth.img" alt="" class="responsive-image">
-								<div class="addition">
-									<img :src="'..' + cloth.img" alt="" class="responsive-image">
-								</div>
-							</a>
-						</div>
-
-						<div class="block__button">
-							<button>Add to cart</button>
-						</div>
-
-						<div class="block__function">
-							<div class="compare">
-								<a href="#">
-									<i class="fa fa-clone"></i>
+					<tr v-for="n in 5">
+						<td>
+							<div class="bag__img">
+								<a href="./components/product_detail.html">
+									<img class="img-small" :src="'..' + cloths[n].img" alt="">
 								</a>
-								<span>Thêm vào so sánh</span>
 							</div>
+						</td>
 
-							<div class="wish-list">
-								<a href="#">
-									<i class="fa fa-heart-o"></i>
-								</a>
-								<span>Thêm vào yêu thích</span>
-							</div>
+						<td> {{cloths[n].name}}, <br> <br> size: S </td>
 
-							<div class="quick-view">
-								<a href="#">
-									<i class="fa fa-eye"></i>
-								</a>
-								<span>Xem nhanh</span>
-							</div>	
-						</div>
+						<td> {{cloths[n].price - cloths[n].price * cloths[n].sale / 100}} Đ</td>
 
-						<div class="block__status">
-							<p>Còn hàng</p>
-						</div>
+						<td> 1 </td>
 
-															
-					</div>
+						<td>{{cloths[n].price - cloths[n].price * cloths[n].sale / 100}} Đ</td>
 
-					<div class="block__bottom">
-						<div class="block__comment block__bottom-item">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star-half-o"></i>
-							<i class="fa fa-star-o"></i>
-							<i class="fa fa-star-o"></i>
-						</div>
+						<td><i class="fa fa-times"></i></td>
 
-						<div class="block__desc block__bottom-item">
-							Áo ......
-						</div>
+					</tr>
 
-						<div class="block__price block__bottom-item">
-							<p>200.000 đ</p>
-						</div>
-					</div>
-				</div>
+					<tr style="border-bottom:none;">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><h3>Tổng tiền:</h3></td>
+						<td><h3>{{bill}} Đ</h3></td>
+						<td></td>
 
+					</tr>
+
+
+
+				</table>
+
+				<a class="bag__button" href="" style="display: flex; //justify-content: center;">Thanh Toán</a>
 			</section>
 
-		</div>	
+		</div>
 
 		<footer>
 			<div class="footer-wrap">
@@ -271,39 +257,52 @@
 			</div>
 			
 		</footer>
+		
+		<script src="../js/vue.js"></script>
+
+		<script src="../js/data/vest_nu.js"></script>
+		
+		<script>
+			
+			new Vue({
+				el: "#bag__full-info",
+
+				data: vest_nu,
+
+				computed: {
+					'bill': function() {
+						var sum = 0;
+
+						for(i = 0; i < 5; i++) {
+							sum+= this.cloths[i].price - this.cloths[i].price * this.cloths[i].sale / 100
+						}
+
+						return sum;
+					}
+				}
+			});
+
+			var main_menu = new Vue({
+				el: '#main-menu',
+				data: {
+					scrollPosition: null,
+					cloths: vest_nu.cloths,
+					bag: {},
+					fav: {}
+				},
+				methods: {
+					updateScroll() {
+						this.scrollPosition = window.scrollY
+					}
+				},
+
+				mounted: function() {
+					window.addEventListener('scroll', this.updateScroll);
+				}
+			});
+
+		</script>
 
 	</body>
-
-	
-
-	<script src="../js/vue.js"></script>
-
-	<script src="../js/ao-somi-nu.js"></script>
-
-	<script>
-		var main_menu = new Vue({
-			el: '#main-menu',
-			data: {
-				scrollPosition: null,
-				cloths: vest_nu.cloths,
-				bag: {},
-				fav: {}
-			},
-			methods: {
-				updateScroll() {
-					this.scrollPosition = window.scrollY
-				}
-			},
-
-			mounted: function() {
-				window.addEventListener('scroll', this.updateScroll);
-			}
-		})
-		
-	</script>
-
-	<footer>
-		
-	</footer>
 
 </html>
