@@ -118,7 +118,7 @@ html, body {
         .top-bar .bar__button .sign-in .login-panel input {
           padding: 5px 10px;
           border: none;
-          border-radius: 3px; }
+          box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3); }
         .top-bar .bar__button .sign-in .login-panel button:hover {
           background: #27ac70; }
     .top-bar .bar__button .btn {
