@@ -104,7 +104,7 @@
 
 		<div class="product__title">
 			<h3><i class="fa fa-address-card-o"></i> Áo khoác dạ dáng xoè</h3>
-			<h3>Các sản phẩm bạn có thể thích</h3>
+			<h3>Các trang phục bạn có thể thích</h3>
 		</div>
 		
 		<div class="product">		
@@ -329,21 +329,21 @@
 			});
 
 			var main_menu = new Vue({
-			el: '#main-menu',
-			data: {
-				scrollPosition: null,
-				cloths: vest_nu.cloths
-			},
-			methods: {
-				updateScroll() {
-					this.scrollPosition = window.scrollY
-				}
-			},
+				el: '#main-menu',
+				data: {
+					scrollPosition: null,
+					cloths: vest_nu.cloths
+				},
+				methods: {
+					updateScroll() {
+						this.scrollPosition = window.scrollY
+					}
+				},
 
-			mounted: function() {
-				window.addEventListener('scroll', this.updateScroll);
-			}
-		});
+				mounted: function() {
+					window.addEventListener('scroll', this.updateScroll);
+				}
+			});
 
 		</script>
 

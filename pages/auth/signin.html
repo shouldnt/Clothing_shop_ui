@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="/css/normalize.css">
+		<link rel="stylesheet" href="/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="/css/login.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">		
+	</head>
+
+	<body>
+		<header class="top-bar">
+			<div class="bar__item bar__logo">
+				<a href="./">
+					<p><span>E</span>SHOP</p>
+				</a>
+				
+			</div>
+			<div class="bar__item bar__hotline">
+				<p><span>HOTLINE: </span> 0981.475.XXX</p>
+			</div>
+			<div class="bar__item bar__button">
+				<a href="#" class="btn">
+				    <div class="box-and-shadow left darken-color">
+				      <i class="fa fa-sign-in"></i>
+				    </div>
+				    <div class="box-and-shadow right">
+				      Đăng nhập
+				    </div>
+				  </a>
+
+				  			
+			</div>
+		</header>
+
+		<div id="main-menu" :class="{'fix-top': scrollPosition >100}" >
+			<ul>
+				<li><a href="../ao-somi-nu.html">Áo sơ mi nữ</a></li>
+				<li><a href="../pages/vay-dam.html">Váy đầm</a></li>
+				<li><a href="../pages/vest-nu.html">Vest nữ</a></li>
+				<li><a href="../pages/quan-cong-so.html">Quần công sở</a></li>
+				<li><a href="../pages/chan-vay.html">Chân Váy</a></li>
+				<li><a href="../pages/thoi-trang-cong-so.html">Thời trang công sở</a></li>
+				<li class="menu-function">
+					<div class="menu-function-item fav-item">
+						<a href="#"><i class="fa fa-heart"></i></a>
+
+						<div id="simple-fav" class="function-detail">
+							<h3>DETAIL</h3>
+						</div>
+					</div>
+
+					<div class="menu-function-item bag">
+						<i class="fa fa-shopping-basket"></i>
+
+						<div id="simple-bag" class="function-detail">
+							<div class="detail-section">
+								<div class="info-items" v-for="n in 5" >
+									<div class="info-img">
+										<img class="responsive-image" :src="'../..' + cloths[n].img" alt="">
+									</div>
+									<div class="info-detail">
+										<p>Tên: {{cloths[n].name}}</p>
+										<div class="size">
+											<p>Size: </p>
+											<select name="" id="" >
+												<option value="S">S</option>
+												<option value="M">M</option>
+												<option value="L">L</option>
+												<option value="XL">XL</option>
+											</select>
+										</div>
+										<p>Giá: {{cloths[n].price - cloths[n].price * cloths[n].sale / 100}} Đ</p>
+									</div>
+
+									<div class="close-button">
+										<i class="fa fa-times"></i>
+									</div>
+									
+								</div>									
+							</div>
+
+							<button>Xem Thêm</button>
+							
+						</div>
+
+					</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="login-part">
+			<section class="title">
+				<h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+			</section>
+			<section class="login">
+				<div class="have-account row align-items">
+					<label for="">Bạn đã có tài khoản: </label>
+					<a href="#">Đăng nhập</a>
+				</div>
+				
+				<div class="social-connnect row align-center">
+					<label for="">Bạn có thể đăng nhập với:</label> 
+					<div class="icon-list">
+						<a href="#"><i class="fa fa-facebook-square"></i></a>
+						<a href="#"><i class="fa fa-google"></i></a>
+					</div>
+				</div>
+				
+			</section>
+
+			<form action="#">
+				<div class="control column">
+					<label for="">Email</label>
+					<input type="text" placeholder="Nhập Email muốn đăng ký">
+
+				</div>
+				<div class=" control column">
+					<label for="">Password:</label>
+					<input type="text" placeholder="Nhập mật khẩu muốn đăng ký">
+				</div>
+
+				<div class=" control column">
+					<label for="">Nhập lại Password:</label>
+					<input type="text" placeholder="Nhập lại mật khẩu ">
+				</div>
+
+				<div class=" control column">
+					<label for="">Họ và tên:</label>
+					<input type="text" placeholder="Nhập họ và tên ">
+				</div>
+
+				<div class=" control row align-center">
+					<input type="checkbox">
+					<a href="#">Tôi đồng ý với điều khoản sử dụng</a>
+				</div>
+
+				<div class="control">
+					<button>Đặng ký</button>
+				</div>
+
+			</form>
+
+
+		</div>
+
+		<footer>
+			<div class="footer-wrap">
+				
+				<div class="footer__block">
+					<div class="block__title">
+						<h3> THÔNG TIN SHOP</h3>
+					</div>
+
+					<div class="block__detail">
+						<div class="item icon-large">
+							<i class="fa fa-map-marker"></i>
+							<p>Mua hàng: Address</p>
+						</div>
+
+						<div class="item icon-large">
+							<i class="fa fa-phone"></i>
+							<p>Hotline: phone number</p>
+						</div>
+
+						<div class="item icon-large">
+							<i class="fa fa-envelope"></i>
+							<p>Email: email</p>
+						</div>
+
+						<div class="item icon-large">
+							<i class="fa fa-clock-o"></i>
+							<p>Thời gian làm việc: datetime</p>
+						</div>
+					</div>
+				</div>		
+
+				<div class="footer__block">
+					<div class="block__title">
+						<h3>HƯỚNG DẪN MUA HÀNG</h3>
+					</div>
+
+					<div class="block__detail">
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Chính sách bảo mật</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Quy chế hoạt động</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Tài khoảng giao dịch</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Đổi hàng trong 7 ngày</a>
+						</div>
+
+						<div class="item item-rm-left-space">
+							<i class="fa fa-arrow-right"></i>
+							<a href="#">Chính sách khách hàng sỉ</a>
+						</div>
+					</div>
+				</div>	
+
+				<div class="footer__block">
+					<div class="block__title">
+						<h3>GOOGLE MAP</h3>
+					</div>
+
+					<div class="block__detail">
+						<div class="item">
+							<h3>MAP</h3>
+						</div>
+					</div>
+				</div>	
+
+			</div>
+
+			<div class="social">
+				<p>Copyright: something here</p>
+				<div class="social__icon">
+					<div class="icon-box">
+						<i class="fa fa-facebook"></i>
+					</div>
+
+					<i class="fa fa-cc-master"></i>
+
+					<i class="fa fa-credit-card-alt"></i>
+
+					<i class="fa fa-cc-paypal"></i>
+
+					<i class="fa fa-cc-visa"></i>
+				</div>
+			</div>
+			
+		</footer>
+
+
+		<script src="../../js/vay_dam.js"></script>
+		<script src="../../js/quan.js"></script>
+		<script src="../../js/chan_vay.js"></script>
+
+		<script src="../../js/data/somi_nu.js"></script>
+		<script src="../../js/data/vest_nu.js"></script>
+
+		<script src="../../js/vue.js"></script>
+
+		<script>
+			var main_menu = new Vue({
+				el: '#main-menu',
+				data: {
+					scrollPosition: null,
+					cloths: vest_nu.cloths
+				},
+				methods: {
+					updateScroll() {
+						this.scrollPosition = window.scrollY
+					}
+				},
+
+				mounted: function() {
+					window.addEventListener('scroll', this.updateScroll);
+				}
+			});
+
+		</script>
+
+
+	</body>
+	
+	<footer>
+		
+	</footer>
+
+</html>
