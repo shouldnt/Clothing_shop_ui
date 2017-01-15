@@ -63,6 +63,15 @@ a {
     .top-bar .bar__logo p span {
       font-weight: bold;
       color: #2cc17e; }
+  .top-bar .bar__hotline {
+    text-transform: uppercase;
+    color: #2cc17e;
+    font-size: 1.5em; }
+    .top-bar .bar__hotline p {
+      margin: 0; }
+      .top-bar .bar__hotline p span {
+        color: white;
+        font-weight: bold; }
   .top-bar .bar__button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -366,7 +375,7 @@ a {
     position: absolute;
     left: 0;
     top: 5px;
-    background: #21a56f;
+    background: #2cc17e;
     color: white;
     padding: 5px 10px; }
     .block__top .block__status p {
@@ -378,7 +387,7 @@ a {
       width: 0;
       height: 0;
       border-top: 12px solid transparent;
-      border-left: 10px solid #21a56f;
+      border-left: 10px solid #2cc17e;
       border-bottom: 12px solid transparent;
       right: -10px;
       top: 0px; }

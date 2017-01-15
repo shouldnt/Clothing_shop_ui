@@ -70,6 +70,15 @@ html, body {
     .top-bar .bar__logo p span {
       font-weight: bold;
       color: #2cc17e; }
+  .top-bar .bar__hotline {
+    text-transform: uppercase;
+    color: #2cc17e;
+    font-size: 1.5em; }
+    .top-bar .bar__hotline p {
+      margin: 0; }
+      .top-bar .bar__hotline p span {
+        color: white;
+        font-weight: bold; }
   .top-bar .bar__button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -242,6 +251,21 @@ html, body {
           right: 0;
           opacity: 1; }
 
+.product__title {
+  width: 1200px;
+  margin: 10px auto;
+  font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .product__title h3 {
+    display: table;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #555; }
+
 .product {
   width: 1200px;
   margin: 10px auto;
@@ -362,6 +386,48 @@ html, body {
               flex: 1;
       padding: 10px; }
 
+#suggest_list {
+  border: 1px solid grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 5px;
+  padding-bottom: 0; }
+  #suggest_list .list_wrap {
+    position: relative; }
+  #suggest_list .list_item {
+    position: relative;
+    width: calc(99.9% * 1/3 - (10px - 10px * 1/3)); }
+  #suggest_list .list_item:nth-child(1n) {
+  float: left;
+  margin-right: 10px;
+  clear: none; }
+  #suggest_list .list_item:last-child {
+  margin-right: 0; }
+  #suggest_list .list_item:nth-child(3n) {
+  margin-right: 0;
+  float: right; }
+  #suggest_list .list_item:nth-child(3n + 1) {
+  clear: both; }
+    #suggest_list .list_item .item_detail {
+      position: absolute;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      padding: 0 5px;
+      background: rgba(255, 255, 255, 0.51);
+      height: 100%;
+      text-transform: capitalize;
+      -webkit-transition: opacity 0.2s ease-in-out;
+      transition: opacity 0.2s ease-in-out; }
+      #suggest_list .list_item .item_detail h5 {
+        width: 100%; }
+    #suggest_list .list_item:hover .item_detail {
+      opacity: 1; }
+
 html, body {
   height: 100%;
   font-family: 'Roboto', sans-serif; }
@@ -431,7 +497,7 @@ div {
     margin-top: 10px;
     margin-bottom: 10px;
     text-decoration: none;
-    color: #2cc17e; }
+    color: #e8003f; }
   .block__detail .item.item-rm-left-space i {
     padding-left: 0; }
   .block__detail .item.icon-large i {

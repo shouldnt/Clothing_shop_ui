@@ -63,6 +63,15 @@ a {
     .top-bar .bar__logo p span {
       font-weight: bold;
       color: #2cc17e; }
+  .top-bar .bar__hotline {
+    text-transform: uppercase;
+    color: #2cc17e;
+    font-size: 1.5em; }
+    .top-bar .bar__hotline p {
+      margin: 0; }
+      .top-bar .bar__hotline p span {
+        color: white;
+        font-weight: bold; }
   .top-bar .bar__button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -257,8 +266,34 @@ a {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    background: #e6e6e6; }
+        flex-wrap: wrap; }
+    .banner .image-link .image-link__item {
+      position: relative;
+      width: calc(99.9% * 1/2 - (10px - 10px * 1/2)); }
+    .banner .image-link .image-link__item:nth-child(1n) {
+  float: left;
+  margin-right: 10px;
+  clear: none; }
+    .banner .image-link .image-link__item:last-child {
+  margin-right: 0; }
+    .banner .image-link .image-link__item:nth-child(2n) {
+  margin-right: 0;
+  float: right; }
+    .banner .image-link .image-link__item:nth-child(2n + 1) {
+  clear: both; }
+      .banner .image-link .image-link__item .addition-info {
+        margin-left: 5px;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.51);
+        border-left: 2px solid #e8003f; }
+        .banner .image-link .image-link__item .addition-info h2 {
+          margin: 0;
+          color: #e8003f; }
+      .banner .image-link .image-link__item img {
+        height: 100%; }
     .banner .image-link .sale-info {
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%;
@@ -349,8 +384,23 @@ label {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-right: 10px;
-  padding-right: 10px;
+  padding-right: 30px;
+  padding-left: 10px;
   border-right: 1px solid rgba(176, 176, 176, 0.2); }
+  .content__left .content__left__title {
+    border-bottom: 1px solid #2cc17e;
+    margin-bottom: 5px; }
+    .content__left .content__left__title h3 {
+      padding: 10px;
+      margin: 0px; }
+  .content__left .post {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #2cc17e; }
+    .content__left .post a {
+      color: #555; }
+    .content__left .post .post-title {
+      font-weight: bold;
+      color: #555; }
   .content__left .box {
     width: 100%;
     height: 80%;
@@ -523,7 +573,7 @@ label {
     position: absolute;
     left: 0;
     top: 5px;
-    background: #21a56f;
+    background: #2cc17e;
     color: white;
     padding: 5px 10px; }
     .block__top .block__status p {
@@ -535,7 +585,7 @@ label {
       width: 0;
       height: 0;
       border-top: 12px solid transparent;
-      border-left: 10px solid #21a56f;
+      border-left: 10px solid #2cc17e;
       border-bottom: 12px solid transparent;
       right: -10px;
       top: 0px; }

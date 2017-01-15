@@ -16,7 +16,7 @@ Number.prototype.format = function(n, x, s, c) {
 Vue.component('content-item', {
 	template: '#content-item',
 
-	props: ['cloths'],
+	props: ['cloths', 'title'],
 
 	data: function() {
 		return {
@@ -76,11 +76,15 @@ var product = new Vue({
 	el: '#content__right',
 
 	data: {
-		somi_nu: somi_data.cloths,
-		vest_nu: vest_nu.cloths,
-		chan_vay: chan_vay.cloths,
-		quan: quan.clohts,
-		vay_dam: vay_dam.cloths
+		my_data: [
+			{item: somi_data.cloths, title: "Áo sơmi nữ"}, 
+			{item: vest_nu.cloths, title: "Vest nữ"},
+			{item: chan_vay.cloths, title: "Chân váy"},
+			{item: quan.clohts, title: "Quần công sở"},
+			{item: vay_dam.cloths, title: "Vấy đầm"}
+		]
+			
+		
 	}
 
 });

@@ -100,16 +100,21 @@
 				</div>
 
 			</div>
+		</div>		
+
+		<div class="product__title">
+			<h3><i class="fa fa-address-card-o"></i> Áo khoác dạ dáng xoè</h3>
+			<h3>Các sản phẩm bạn có thể thích</h3>
 		</div>
 		
-		<div class="product">
+		<div class="product">		
 			
 			<div id="product__img">
 				<img class="img-responsive" :src="'../..' + current_img" alt="detail">
 				
 				<div class="more__img">
 					<div class="img-item" v-for="img in imgs" @click="current_img = img">
-						<img :src="img" alt="">
+						<img :src="'../..' + img" alt="">
 					</div>
 						
 					
@@ -177,8 +182,18 @@
 				</form>
 			</div>
 
-			<div class="contact">
-				done
+			<div id="suggest_list">
+				<div class="list_item" v-for="n in 9">
+					<div class="list_wrap">
+						<a href="#">
+							<img :src="'../..' + cloths[n].img" alt="" class="responsive-image">
+						
+						<div class="item_detail">
+							<h5>{{cloths[n].name}}</h5>
+						</div>
+						</a>
+					</div>
+				</div>
 			</div>
 
 		</div>
@@ -283,6 +298,8 @@
 		
 		<script src="../../js/vue.js"></script>
 
+		<script src="../../js/vay_dam.js"></script>
+
 		<script src="../../js/data/vest_nu.js"></script>
 
 		<script>
@@ -304,13 +321,18 @@
 
 			});
 
+			var sugguest_list = new Vue({
+				el: "#suggest_list",
+				data: {
+					cloths: vay_dam.cloths
+				}
+			});
+
 			var main_menu = new Vue({
 			el: '#main-menu',
 			data: {
 				scrollPosition: null,
-				cloths: vest_nu.cloths,
-					bag: {},
-					fav: {}
+				cloths: vest_nu.cloths
 			},
 			methods: {
 				updateScroll() {

@@ -17,7 +17,7 @@
 				
 			</div>
 			<div class="bar__item bar__hotline">
-				<p><span>HOTLINE</span> PHONE NUMBER</p>
+				<p><span>HOTLINE: </span> 0981.475.XXX</p>
 			</div>
 			<div class="bar__item bar__button">
 				<a href="#" class="btn">
@@ -140,12 +140,24 @@
 					</div>
 
 					<div class="image-link">
-						<div class="imgae-link__item">
-							
+						<div class="image-link__item">
+							<div class="addition-info">
+								<h2>Sale off 50
+								%</h2>
+							</div>
+							<a href="#">
+								<img src="./images/banner/1.jpg" alt="" class="responsive-image">
+							</a>
 						</div>
 
-						<div class="imgae-link__item">
-							
+						<div class="image-link__item">
+							<div class="addition-info">
+								<h2>Sale off 60
+								%</h2>
+							</div>
+							<a href="#">
+								<img src="./images/banner/2.jpg" alt="" class="responsive-image">
+							</a>
 						</div>
 					</div>
 					
@@ -153,12 +165,54 @@
 
 				<div class="content">
 						<div class="content__left">
-							side content
-							<div class="box"></div>
+							<div class="content__left__title">
+								<h3>Thời Trang Công Sở</h3>
+							</div>
+							<div class="post">
+								<div class="post-title">
+									<a href="#">
+										<p>Những kiểu sơ mi phong cách trẻ trung cho ngày đầu xuân 2017...</p>
+									</a>
+								</div>
+								<div class="post-img">
+									<img src="./images/posts/1.jpg" alt="">
+								</div>
+								<div class="post-detail">
+									<p>Những ngày xuân xuống phố sẽ trẻ trung hơn nếu cô nàng chọn cho mình những kiểu sơ mi cách điệu kết hợp màu sắc hay hoạ tiết nổi bật. Với những áo sơ mi trẻ trung rất thích hợp để diện công sở hay đi...</p>
+								</div>
+							</div>
+
+							<div class="post">
+								<div class="post-title">
+									<a href="#">
+										<p>Muôn kiểu áo phối ren đẹp cho nữ công sở diện đông xuân 2017...</p>
+									</a>
+								</div>
+								<div class="post-img">
+									<img src="./images/posts/2.jpg" alt="">
+								</div>
+								<div class="post-detail">
+									<p>Áo ren quyến rũ không chỉ dành cho thời trang hè mà sang thu đông vẫn luôn là style lý tưởng của các cô nàng thời trang. Với chất liệu ren dày 2 lớp bạn gái có thể tự tin diện đơn cả những ngày lạnh ...</p>
+								</div>
+							</div>
+
+							<div class="post">
+								<div class="post-title">
+									<a href="#">
+										<p>BST áo len Hàn Quốc đẹp trẻ trung cho bạn gái phối đồ diện tết...</p>
+									</a>
+								</div>
+								<div class="post-img">
+									<img src="./images/posts/3.jpg" alt="">
+								</div>
+								<div class="post-detail">
+									<p>Những chiếc áo len trẻ trung cá tính có thể diện đơn trong các set đồ năng động khi thời tiết tết không quá lạnh. Áo len Hàn Quốc vẫn là lựa chọn của nhiều bạn gái bởi chất liệu len cao cấp mềm mại v...</p>
+								</div>
+							</div>
 						</div>
 
 						<div id="content__right">
-							<content-item v-for="data in $data" :cloths="data"></content-item>							
+							<content-item v-for="data in my_data" :cloths="data.item" :title="data.title"></content-item>							
 						</div>
 				</div>
 
@@ -263,11 +317,12 @@
 			
 		</footer>
 
+		
 
 	<template id="content-item">
 		<div class="content__right__item">
 			<div class="item-title">
-				<p>Title here</p>
+				<p>{{title}}</p>
 				<button @click="toggle">
 					<template v-if="show">Xem thêm
 						<i class="fa fa-plus" aria-hidden="true"></i>
